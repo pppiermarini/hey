@@ -1,0 +1,18 @@
+k8s:
+  dev:
+    namespace: spil-dev
+    cluster: ecn-core-ll
+  qa:
+    namespace: spil-qa
+    cluster: ecn-core-ll
+
+gitInfo:
+  dev:
+    certsDir: spil-dev
+    sourceDir: spil-dev #azure, potential on prem server
+  qa:
+    certsDir: spil-qa
+    sourceDir: spil-qa
+
+email:
+  emailDistribution: rkale@incomm.com 

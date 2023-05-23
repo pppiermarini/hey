@@ -1,0 +1,1048 @@
+{
+  "result": {
+    "u_req_imp_start_date": {
+      "display_value": "2022-01-27 07:00:00",
+      "value": "2022-01-27 12:00:00",
+      "display_value_internal": "2022-01-27 07:00:00"
+    },
+    "reason": {
+      "display_value": "",
+      "value": ""
+    },
+    "parent": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_created_incidents": {
+      "display_value": "",
+      "value": ""
+    },
+    "watch_list": {
+      "display_value": "",
+      "value": ""
+    },
+    "sys_updated_on": {
+      "display_value": "2022-01-26 19:30:50",
+      "value": "2022-01-27 00:30:50",
+      "display_value_internal": "2022-01-26 19:30:50"
+    },
+    "u_change_template": {
+      "display_value": "",
+      "value": ""
+    },
+    "skills": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_rollback": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_business_impact": {
+      "display_value": "",
+      "value": ""
+    },
+    "requested_by_date": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_calendar_end": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_change_dependencies": {
+      "display_value": "Verify new deployment artifacts are available ",
+      "value": "Verify new deployment artifacts are available "
+    },
+    "u_dbadev_reviewer": {
+      "display_value": "",
+      "value": ""
+    },
+    "state": {
+      "display_value": "Scheduled",
+      "value": 5
+    },
+    "sys_created_by": {
+      "display_value": "svc_jenkins",
+      "value": "svc_jenkins"
+    },
+    "knowledge": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_retirement_date": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_risk_description": {
+      "display_value": "",
+      "value": ""
+    },
+    "cmdb_ci_business_app": {
+      "display_value": "",
+      "value": ""
+    },
+    "impact": {
+      "display_value": "3 - Moderate",
+      "value": 3
+    },
+    "active": {
+      "display_value": "true",
+      "value": true
+    },
+    "u_test_results_link": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_ci_category": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_pending_duration": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_change_author": {
+      "display_value": "Devops Engineering",
+      "value": "e45b8fd3db9ea0901eda4e8a139619ad"
+    },
+    "production_system": {
+      "display_value": "false",
+      "value": false
+    },
+    "cab_recommendation": {
+      "display_value": "",
+      "value": ""
+    },
+    "rejection_goto": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_prereqs": {
+      "display_value": "false",
+      "value": false
+    },
+    "group_list": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_rlse_type": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_approval_duration": {
+      "display_value": "1 Minute",
+      "value": "1970-01-01 00:01:36"
+    },
+    "u_peer_reviewer": {
+      "display_value": "Paul Piermarini",
+      "value": "0d83277238716400832b446b94d30ae0"
+    },
+    "wf_activity": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_show_on_calendar": {
+      "display_value": "true",
+      "value": true
+    },
+    "u_pi_validation": {
+      "display_value": "",
+      "value": ""
+    },
+    "end_date": {
+      "display_value": "2022-01-27 09:00:00",
+      "value": "2022-01-27 14:00:00",
+      "display_value_internal": "2022-01-27 09:00:00"
+    },
+    "u_security": {
+      "display_value": "false",
+      "value": false
+    },
+    "correlation_display": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_break_fix_approver": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_dba": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_stakeholder_s": {
+      "display_value": "",
+      "value": ""
+    },
+    "outside_maintenance_schedule": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_rollback_start": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_impacted_premier_partners": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_operational_readiness": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_platform": {
+      "display_value": "",
+      "value": ""
+    },
+    "service_offering": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_pending_timestamp": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "follow_up": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_requires_operational_review": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_requires_facilities_review": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_require_manager_approval": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_emergency_reason": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_calendar_start": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_itr_root_cause_owner": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_rejected_count": {
+      "display_value": "0",
+      "value": 0
+    },
+    "u_deploy_reviewer": {
+      "display_value": "Rohit Kale",
+      "value": "a83edfbadb22141022194e8a139619d8"
+    },
+    "variables": {
+      "display_value": "variable_pool",
+      "value": "variable_pool"
+    },
+    "u_quality_tester": {
+      "display_value": "",
+      "value": ""
+    },
+    "comments_and_work_notes": {
+      "display_value": "2022-01-26 19:30:51 - System (Additional comments)\nThis Change has been auto-scheduled because it met the requirements\n\n",
+      "value": ""
+    },
+    "u_japan_notification_sent": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_affected_other_apps": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_impact_to_japan_if_issue": {
+      "display_value": "No",
+      "value": "No"
+    },
+    "u_build_engr": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_outage_flag": {
+      "display_value": "false",
+      "value": false
+    },
+    "escalation": {
+      "display_value": "Normal",
+      "value": 0
+    },
+    "correlation_id": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_non_emp_phone": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_approve_reservation": {
+      "display_value": "true",
+      "value": true
+    },
+    "made_sla": {
+      "display_value": "true",
+      "value": true
+    },
+    "u_created_incidents_": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_implementation_window": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_outage": {
+      "display_value": "No",
+      "value": "2"
+    },
+    "u_planned_outage_start": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_implementation_schedules": {
+      "display_value": "",
+      "value": ""
+    },
+    "user_input": {
+      "display_value": "",
+      "value": ""
+    },
+    "sys_created_on": {
+      "display_value": "2022-01-26 19:29:44",
+      "value": "2022-01-27 00:29:44",
+      "display_value_internal": "2022-01-26 19:29:44"
+    },
+    "u_incident_cause_code": {
+      "display_value": "",
+      "value": ""
+    },
+    "route_reason": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_env_to_chg": {
+      "display_value": "Production",
+      "value": "Production"
+    },
+    "u_is_single_transaction_ticket": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_state_timestamp": {
+      "display_value": "2022-01-26 19:30:51",
+      "value": "2022-01-27 00:30:51",
+      "display_value_internal": "2022-01-26 19:30:51"
+    },
+    "u_change_author_manager": {
+      "display_value": "Vamsi Hari",
+      "value": "f27e589f38356400832b446b94d30a18"
+    },
+    "closed_at": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_change_manager": {
+      "display_value": "",
+      "value": ""
+    },
+    "review_comments": {
+      "display_value": "",
+      "value": ""
+    },
+    "time_worked": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_security_reviewer": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_possible_impact_to_amex": {
+      "display_value": "No",
+      "value": "No"
+    },
+    "u_rollback_reason": {
+      "display_value": "",
+      "value": ""
+    },
+    "work_end": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "cab_date": {
+      "display_value": "2022-01-27",
+      "value": "2022-01-27",
+      "display_value_internal": "2022-01-26 19:00:00"
+    },
+    "work_notes": {
+      "display_value": "",
+      "value": ""
+    },
+    "close_code": {
+      "display_value": "",
+      "value": ""
+    },
+    "assignment_group": {
+      "display_value": "Devops Engineering",
+      "value": "7535e6421bf9e810c66e64ea234bcbc1"
+    },
+    "u_requires_dba_review": {
+      "display_value": "false",
+      "value": false
+    },
+    "description": {
+      "display_value": "Possible Impact to Japan if unexpected issues arise? NO \n\nProvide a Description of the change and Justification for the change proceeding: \nWe want to upgrade the Hello-World application which is an InComm application under the Fusion-SellIT application platform to version 1.14.15-2022.01.05-11.03-f49ddc1 from its current version 1.13.12-2021.11.30-08.55-95abbdc. \n\nSellIT is a portal for Corporate and Store managers to perform their functions by providing a store-level perspective of sales, products, planograms, orders, and inventory. Also, SellIT data is available to the remaining platforms on Fusion. At the launch, SellIT is supporting Albertsons, and in the future, we can onboard more merchants to it.\nAll changes going as part of this release are documented here - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60539372708/Release+Notes+Sprint+17-20 \n\nThe changes have been extensively tested in QA & UAT environments. The approvals have been attached to the change. \nQA Approval - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60539372676/QA+Sign+Off+Report+Sprint+17-20 \nUAT Approval - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60544975321/Sprint+17-19+UAT+-+Jan+Tue+Jan+11+-+Tue+Jan+18+-+Approved \nAutomated regression tests have been run successfully and the results are available here http://testreports.incomm.com/ui/#fusion/launches/all/7848 \n\nProvide Business impact if this change is not completed: \nIf this change is not completed or delayed, then we would not be able to add more features/fixes to the SellIT Platform as Hello-World is an essential part of the Fusion-SellIT platform. Our external customers and internal users will be unable to use the latest upgrades to the platform. \n\nWhat is changing: \nUpgrading Hello-World application from version 1.13.12-2021.11.30-08.55-95abbdc to 1.14.15-2022.01.05-11.03-f49ddc1 \n\nWhy is it changing: \nAdd more features/fixes to the SellIT Platform \n\nHow is it changing: \nWe are deploying the latest QA & UAT-approved artifact in Production. We will be using a Github Action as defined at this URL \"https://github.com/InComm-Software-Development/ProduceIT-DevOps/actions/workflows/sellit-prod-deploy.yml\" to deploy the Hello-World artifact. The deployer will put in the Hello-World artifact version 1.14.15-2022.01.05-11.03-f49ddc1 in the Github Action workflow UI and click \"Run workflow\" to trigger the deployment process. The GitHub Action will deploy the Hello-World application and will run smoke tests to validate if the deployment is successful. Manual validation will also be done during the deployment window.\n",
+      "value": "Possible Impact to Japan if unexpected issues arise? NO \n\nProvide a Description of the change and Justification for the change proceeding: \nWe want to upgrade the Hello-World application which is an InComm application under the Fusion-SellIT application platform to version 1.14.15-2022.01.05-11.03-f49ddc1 from its current version 1.13.12-2021.11.30-08.55-95abbdc. \n\nSellIT is a portal for Corporate and Store managers to perform their functions by providing a store-level perspective of sales, products, planograms, orders, and inventory. Also, SellIT data is available to the remaining platforms on Fusion. At the launch, SellIT is supporting Albertsons, and in the future, we can onboard more merchants to it.\nAll changes going as part of this release are documented here - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60539372708/Release+Notes+Sprint+17-20 \n\nThe changes have been extensively tested in QA & UAT environments. The approvals have been attached to the change. \nQA Approval - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60539372676/QA+Sign+Off+Report+Sprint+17-20 \nUAT Approval - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60544975321/Sprint+17-19+UAT+-+Jan+Tue+Jan+11+-+Tue+Jan+18+-+Approved \nAutomated regression tests have been run successfully and the results are available here http://testreports.incomm.com/ui/#fusion/launches/all/7848 \n\nProvide Business impact if this change is not completed: \nIf this change is not completed or delayed, then we would not be able to add more features/fixes to the SellIT Platform as Hello-World is an essential part of the Fusion-SellIT platform. Our external customers and internal users will be unable to use the latest upgrades to the platform. \n\nWhat is changing: \nUpgrading Hello-World application from version 1.13.12-2021.11.30-08.55-95abbdc to 1.14.15-2022.01.05-11.03-f49ddc1 \n\nWhy is it changing: \nAdd more features/fixes to the SellIT Platform \n\nHow is it changing: \nWe are deploying the latest QA & UAT-approved artifact in Production. We will be using a Github Action as defined at this URL \"https://github.com/InComm-Software-Development/ProduceIT-DevOps/actions/workflows/sellit-prod-deploy.yml\" to deploy the Hello-World artifact. The deployer will put in the Hello-World artifact version 1.14.15-2022.01.05-11.03-f49ddc1 in the Github Action workflow UI and click \"Run workflow\" to trigger the deployment process. The GitHub Action will deploy the Hello-World application and will run smoke tests to validate if the deployment is successful. Manual validation will also be done during the deployment window.\n"
+    },
+    "on_hold_reason": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_source": {
+      "display_value": "[Change API]",
+      "value": "[Change API]"
+    },
+    "u_non_emp_email": {
+      "display_value": "",
+      "value": ""
+    },
+    "sys_id": {
+      "display_value": "14244aeddb9581d0c8a26d8d1396194e",
+      "value": "14244aeddb9581d0c8a26d8d1396194e"
+    },
+    "u_bf_incident_description": {
+      "display_value": "",
+      "value": ""
+    },
+    "urgency": {
+      "display_value": "",
+      "value": ""
+    },
+    "scope": {
+      "display_value": "Medium",
+      "value": 3
+    },
+    "company": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_workaround_details": {
+      "display_value": "",
+      "value": ""
+    },
+    "approval": {
+      "display_value": "Not Yet Requested",
+      "value": "not requested"
+    },
+    "u_release": {
+      "display_value": "",
+      "value": ""
+    },
+    "sys_tags": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_livetime_id": {
+      "display_value": "",
+      "value": ""
+    },
+    "conflict_last_run": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_bridge_required_manual_override": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_incident_cause_code_detail": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_rpt_starting_change_date_time": {
+      "display_value": "2022-01-27 07:00:00",
+      "value": "2022-01-27 12:00:00",
+      "display_value_internal": "2022-01-27 07:00:00"
+    },
+    "risk": {
+      "display_value": "Low",
+      "value": 4
+    },
+    "location": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_sub_category_other": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_non_emp_tester": {
+      "display_value": "",
+      "value": ""
+    },
+    "risk_impact_analysis": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_cab_status": {
+      "display_value": "Approved",
+      "value": "approved"
+    },
+    "u_rollback_end": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_environment_in_scope": {
+      "display_value": "",
+      "value": ""
+    },
+    "upon_reject": {
+      "display_value": "Cancel all future Tasks",
+      "value": "cancel"
+    },
+    "type": {
+      "display_value": "Normal",
+      "value": "normal"
+    },
+    "u_rollback_steps": {
+      "display_value": "",
+      "value": ""
+    },
+    "approval_history": {
+      "display_value": "2022-01-26 19:30:24 - SOP DevOps Service Account (Approval history)\nGroup approval for Change Management approved by user Sonja Goodwin (Change Management - Requested).\n\n",
+      "value": ""
+    },
+    "u_approval_timestamp": {
+      "display_value": "2022-01-26 19:29:44",
+      "value": "2022-01-27 00:29:44",
+      "display_value_internal": "2022-01-26 19:29:44"
+    },
+    "test_plan": {
+      "display_value": "1. Automated smoke tests will be run first to verify the application is up and available. \n2. Manually check the URL https://sellit.fusion.incomm.com/assets/versions.txt to verify the requested version is deployed and confirm that it is 1.14.15-2022.01.05-11.03-f49ddc1. \n3. Manual verification will be done during the deployment window to ensure newly deployed functionality is available.",
+      "value": "1. Automated smoke tests will be run first to verify the application is up and available. \n2. Manually check the URL https://sellit.fusion.incomm.com/assets/versions.txt to verify the requested version is deployed and confirm that it is 1.14.15-2022.01.05-11.03-f49ddc1. \n3. Manual verification will be done during the deployment window to ensure newly deployed functionality is available."
+    },
+    "number": {
+      "display_value": "CHG0091879",
+      "value": "CHG0091879"
+    },
+    "cab_delegate": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_communication_required": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_extend_reason_other": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_impact_description": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_japan_notification_time": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "order": {
+      "display_value": "",
+      "value": ""
+    },
+    "phase": {
+      "display_value": "Requested",
+      "value": "requested"
+    },
+    "u_monitoring": {
+      "display_value": "",
+      "value": ""
+    },
+    "cmdb_ci": {
+      "display_value": "SellIT UI",
+      "value": "307b38f61bddf4508e4799fa234bcbe3"
+    },
+    "u_cab_duration": {
+      "display_value": "56 Seconds",
+      "value": "1970-01-01 00:00:56"
+    },
+    "u_state_duration": {
+      "display_value": "29 Seconds",
+      "value": "1970-01-01 00:00:29"
+    },
+    "work_notes_list": {
+      "display_value": "",
+      "value": ""
+    },
+    "priority": {
+      "display_value": "3 - Moderate",
+      "value": 3
+    },
+    "u_kb_links": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_original_end_date": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_description": {
+      "display_value": "",
+      "value": ""
+    },
+    "review_date": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "requested_by": {
+      "display_value": "Vamsi Hari",
+      "value": "f27e589f38356400832b446b94d30a18"
+    },
+    "business_duration": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_template": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_specify_incidents": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_additional_groups": {
+      "display_value": "",
+      "value": ""
+    },
+    "change_plan": {
+      "display_value": "Deployment Steps \n------------------------- \n\n1. The deployment is being done by using a manually triggered GitHub Action and will involve just providing the version to be deployed and clicking a button to initiate an automated application deployment and post-deployment verification process. \n2. The deployer will navigate to the URL \"https://github.com/InComm-Software-Development/ProduceIT-DevOps/actions/workflows/sellit-prod-deploy.yml\". \n3. Click on the \"Run Workflow\" button and input the QA & UAT-tested and approved version 1.14.15-2022.01.05-11.03-f49ddc1 of the Hello-World application to be deployed and run the workflow. \n4. The manually triggered deployment workflow will do a blue-green deployment. The newer version of the application will be deployed first to the non-live blue environment. Then traffic is swapped to blue from the live green environment. \nAfter that, the application is deployed to the now non-live green environment and then read-only smoke tests are run on production the results of which are found in http://testreports.incomm.com/ui/#fusion/launches/all \nLighthouse CI reports are also generated and the link will be available in the pipeline logs. \nOWASP DAST penetration testing is done after the smoke tests and the report is attached as an artifact to the pipeline execution details.\n",
+      "value": "Deployment Steps \n------------------------- \n\n1. The deployment is being done by using a manually triggered GitHub Action and will involve just providing the version to be deployed and clicking a button to initiate an automated application deployment and post-deployment verification process. \n2. The deployer will navigate to the URL \"https://github.com/InComm-Software-Development/ProduceIT-DevOps/actions/workflows/sellit-prod-deploy.yml\". \n3. Click on the \"Run Workflow\" button and input the QA & UAT-tested and approved version 1.14.15-2022.01.05-11.03-f49ddc1 of the Hello-World application to be deployed and run the workflow. \n4. The manually triggered deployment workflow will do a blue-green deployment. The newer version of the application will be deployed first to the non-live blue environment. Then traffic is swapped to blue from the live green environment. \nAfter that, the application is deployed to the now non-live green environment and then read-only smoke tests are run on production the results of which are found in http://testreports.incomm.com/ui/#fusion/launches/all \nLighthouse CI reports are also generated and the link will be available in the pipeline logs. \nOWASP DAST penetration testing is done after the smoke tests and the report is attached as an artifact to the pipeline execution details.\n"
+    },
+    "approval_set": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "implementation_plan": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_release_coordinated_required": {
+      "display_value": "No",
+      "value": "No"
+    },
+    "universal_request": {
+      "display_value": "",
+      "value": ""
+    },
+    "short_description": {
+      "display_value": "Upgrade Hello-World application from version 1.13.12-2021.11.30-08.55-95abbdc to 1.14.15-2022.01.05-11.03-f49ddc1",
+      "value": "Upgrade Hello-World application from version 1.13.12-2021.11.30-08.55-95abbdc to 1.14.15-2022.01.05-11.03-f49ddc1"
+    },
+    "work_start": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_workaround": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_conference": {
+      "display_value": "",
+      "value": ""
+    },
+    "additional_assignee_list": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_prerequisite_generated": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_approved_by_cab": {
+      "display_value": "2022-01-26 19:30:50",
+      "value": "2022-01-27 00:30:50",
+      "display_value_internal": "2022-01-26 19:30:50"
+    },
+    "u_assignment_grp_vp": {
+      "display_value": "Kevin Fuller",
+      "value": "c4fe771738f56400832b446b94d30a45"
+    },
+    "sys_class_name": {
+      "display_value": "Change Request",
+      "value": "change_request"
+    },
+    "closed_by": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_deployment_details": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_related_to_projects": {
+      "display_value": "Implement Workflow Driven Front Office Operations Tools",
+      "value": "ca00283c1ba30450af6eed7dee4bcb42"
+    },
+    "u_require_additional_approvers": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_excab_reasons": {
+      "display_value": "",
+      "value": ""
+    },
+    "review_status": {
+      "display_value": "",
+      "value": ""
+    },
+    "reassignment_count": {
+      "display_value": "0",
+      "value": 0
+    },
+    "u_project_manager": {
+      "display_value": "Some One",
+      "value": "36ff3b1738f56400832b446b94d30ad1"
+    },
+    "u_single_txn_category": {
+      "display_value": "Uncategorized",
+      "value": "Uncategorized"
+    },
+    "start_date": {
+      "display_value": "2022-01-27 07:00:00",
+      "value": "2022-01-27 12:00:00",
+      "display_value_internal": "2022-01-27 07:00:00"
+    },
+    "assigned_to": {
+      "display_value": "Someone else",
+      "value": "99ea1f4b0f341240c745b65be1050e5d"
+    },
+    "u_test_results": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_unknown_ci_justification": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_pir_tester_type": {
+      "display_value": "Employee",
+      "value": "Employee"
+    },
+    "u_req_imp_end_date": {
+      "display_value": "2022-01-27 09:00:00",
+      "value": "2022-01-27 14:00:00",
+      "display_value_internal": "2022-01-27 09:00:00"
+    },
+    "sla_due": {
+      "display_value": "UNKNOWN",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_affected_apps": {
+      "display_value": "Hello-World",
+      "value": "307b38f61bddf4508e4799fa234bcbe3"
+    },
+    "u_critical_reason": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_escalation": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_sub_category": {
+      "display_value": "Sales and Operations Platforms Applications",
+      "value": "Sales and Operations Platforms Applications"
+    },
+    "u_ci_s": {
+      "display_value": "",
+      "value": ""
+    },
+    "upon_approval": {
+      "display_value": "Proceed to Next Task",
+      "value": "proceed"
+    },
+    "u_incident": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_possible_impact_to_japan": {
+      "display_value": "No",
+      "value": "No"
+    },
+    "u_legacy_ticket_number": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_requested_by_vp": {
+      "display_value": "Kevin Fuller",
+      "value": "c4fe771738f56400832b446b94d30a45"
+    },
+    "u_extend_reason": {
+      "display_value": "",
+      "value": ""
+    },
+    "backout_plan": {
+      "display_value": "Backout Steps\n-------------------- \n\n1. The rollback is being done by using a manually triggered GitHub Action and will involve just providing the previous version to be deployed and clicking a button to initiate an automated application deployment and post-deployment verification process. \n2. The deployer will navigate to the URL \"https://github.com/InComm-Software-Development/ProduceIT-DevOps/actions/workflows/sellit-prod-rollback.yml\". \n3. Click on the \"Run Workflow\" button and input the prior version 1.13.12-2021.11.30-08.55-95abbdc of the Hello-World application to be deployed and run the workflow. \n4. The manually triggered deployment workflow will do a blue-green deployment. The prior version of the application will be deployed first to the non-live blue environment. Then traffic is swapped to blue from the live green environment. \nAfter that, the application is deployed to the now non-live green environment and then read-only smoke tests are run on production the results of which are found in http://testreports.incomm.com/ui/#fusion/launches/all \nLighthouse CI reports are also generated and the link will be available in the pipeline logs. \nOWASP DAST penetration testing is done after the smoke tests and the report is attached as an artifact to the pipeline execution details.\n",
+      "value": "Backout Steps\n-------------------- \n\n1. The rollback is being done by using a manually triggered GitHub Action and will involve just providing the previous version to be deployed and clicking a button to initiate an automated application deployment and post-deployment verification process. \n2. The deployer will navigate to the URL \"https://github.com/InComm-Software-Development/ProduceIT-DevOps/actions/workflows/sellit-prod-rollback.yml\". \n3. Click on the \"Run Workflow\" button and input the prior version 1.13.12-2021.11.30-08.55-95abbdc of the Hello-World application to be deployed and run the workflow. \n4. The manually triggered deployment workflow will do a blue-green deployment. The prior version of the application will be deployed first to the non-live blue environment. Then traffic is swapped to blue from the live green environment. \nAfter that, the application is deployed to the now non-live green environment and then read-only smoke tests are run on production the results of which are found in http://testreports.incomm.com/ui/#fusion/launches/all \nLighthouse CI reports are also generated and the link will be available in the pipeline logs. \nOWASP DAST penetration testing is done after the smoke tests and the report is attached as an artifact to the pipeline execution details.\n"
+    },
+    "u_facilities": {
+      "display_value": "false",
+      "value": false
+    },
+    "conflict_status": {
+      "display_value": "Not Run",
+      "value": "Not Run"
+    },
+    "task_effective_number": {
+      "display_value": "CHG0091879",
+      "value": "CHG0091879"
+    },
+    "sys_updated_by": {
+      "display_value": "system",
+      "value": "system"
+    },
+    "u_duration_in_minutes": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_dc_location": {
+      "display_value": "Azure",
+      "value": "3e1b1f881b28d810094163166e4bcb8e"
+    },
+    "u_short_description": {
+      "display_value": "",
+      "value": ""
+    },
+    "opened_by": {
+      "display_value": "DevOps Engineering",
+      "value": "e45b8fd3db9ea0901eda4e8a139619ad"
+    },
+    "on_hold_task": {
+      "display_value": "",
+      "value": ""
+    },
+    "sys_domain": {
+      "display_value": "global",
+      "value": "global"
+    },
+    "u_major_minor_change": {
+      "display_value": "No",
+      "value": "no"
+    },
+    "u_bridge": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_dbaops_reviewer": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_standard_template_owner": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_cab_duration_final": {
+      "display_value": "26 Seconds",
+      "value": "1970-01-01 00:00:26"
+    },
+    "u_no_itoc": {
+      "display_value": "No Bridge Required",
+      "value": "yes"
+    },
+    "business_service": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_planned_outage_end": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "chg_model": {
+      "display_value": "",
+      "value": ""
+    },
+    "expected_start": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_emergency_summary": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_jira_id_": {
+      "display_value": "",
+      "value": ""
+    },
+    "opened_at": {
+      "display_value": "2022-01-26 19:29:44",
+      "value": "2022-01-27 00:29:44",
+      "display_value_internal": "2022-01-26 19:29:44"
+    },
+    "u_group_assignment_time": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "phase_state": {
+      "display_value": "Open",
+      "value": "open"
+    },
+    "u_release_coordinator": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_submitted_for_approval": {
+      "display_value": "2022-01-26 19:30:08",
+      "value": "2022-01-27 00:30:08",
+      "display_value_internal": "2022-01-26 19:30:08"
+    },
+    "u_backout_tested": {
+      "display_value": "YES - ALL steps have been tested successfully",
+      "value": "yes"
+    },
+    "u_calculated_description": {
+      "display_value": "Possible Impact to Japan if unexpected issues arise? NO\n\nThis Change Request was created via an API based service account or other automated means.\n\nRisk Assessment Information:\nRisk Assessment Complete.",
+      "value": "Possible Impact to Japan if unexpected issues arise? NO\n\nThis Change Request was created via an API based service account or other automated means.\n\nRisk Assessment Information:\nRisk Assessment Complete."
+    },
+    "calendar_duration": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_additional_approvers": {
+      "display_value": "",
+      "value": ""
+    },
+    "close_notes": {
+      "display_value": "",
+      "value": ""
+    },
+    "contact_type": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_submitted_to_cab": {
+      "display_value": "2022-01-26 19:30:24",
+      "value": "2022-01-27 00:30:24",
+      "display_value_internal": "2022-01-26 19:30:24"
+    },
+    "cab_required": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_executive_cab_date": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_qa_testing_result": {
+      "display_value": "",
+      "value": ""
+    },
+    "justification": {
+      "display_value": "We want to upgrade the Hello-World application which is an InComm application under the Fusion-SellIT application platform to version 1.14.15-2022.01.05-11.03-f49ddc1 from its current version 1.13.12-2021.11.30-08.55-95abbdc.\n\nSellIT is a portal for Corporate and Store managers to perform their functions by providing a store-level perspective of sales, products, planograms, orders, and inventory. Also, SellIT data is available to the remaining platforms on Fusion. At the launch, SellIT is supporting Albertsons, and in the future, we can onboard more merchants to it.\n\nAll changes going as part of this release are documented here - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60539372708/Release+Notes+Sprint+17-20 \n\nThe changes have been extensively tested in QA & UAT environments. The approvals have been attached to the change. \nQA Approval - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60539372676/QA+Sign+Off+Report+Sprint+17-20 \nUAT Approval - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60544975321/Sprint+17-19+UAT+-+Jan+Tue+Jan+11+-+Tue+Jan+18+-+Approved \nAutomated regression tests have been run successfully and the results are available here http://testreports.incomm.com/ui/#fusion/launches/all/7848",
+      "value": "We want to upgrade the Hello-World application which is an InComm application under the Fusion-SellIT application platform to version 1.14.15-2022.01.05-11.03-f49ddc1 from its current version 1.13.12-2021.11.30-08.55-95abbdc.\n\nSellIT is a portal for Corporate and Store managers to perform their functions by providing a store-level perspective of sales, products, planograms, orders, and inventory. Also, SellIT data is available to the remaining platforms on Fusion. At the launch, SellIT is supporting Albertsons, and in the future, we can onboard more merchants to it.\n\nAll changes going as part of this release are documented here - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60539372708/Release+Notes+Sprint+17-20 \n\nThe changes have been extensively tested in QA & UAT environments. The approvals have been attached to the change. \nQA Approval - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60539372676/QA+Sign+Off+Report+Sprint+17-20 \nUAT Approval - https://incomm-payments.atlassian.net/wiki/spaces/FrontOffice/pages/60544975321/Sprint+17-19+UAT+-+Jan+Tue+Jan+11+-+Tue+Jan+18+-+Approved \nAutomated regression tests have been run successfully and the results are available here http://testreports.incomm.com/ui/#fusion/launches/all/7848"
+    },
+    "activity_due": {
+      "display_value": "UNKNOWN",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "u_rpt_end_date": {
+      "display_value": "2022-01-27",
+      "value": "2022-01-27",
+      "display_value_internal": "2022-01-26 19:00:00"
+    },
+    "u_rpt_start_date": {
+      "display_value": "2022-01-27",
+      "value": "2022-01-27",
+      "display_value_internal": "2022-01-26 19:00:00"
+    },
+    "comments": {
+      "display_value": "2022-01-26 19:30:51 - System (Additional comments)\nThis Change has been auto-scheduled because it met the requirements\n\n",
+      "value": ""
+    },
+    "u_approvals_required": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_rejected_reason": {
+      "display_value": "",
+      "value": ""
+    },
+    "due_date": {
+      "display_value": "",
+      "value": "",
+      "display_value_internal": ""
+    },
+    "sys_mod_count": {
+      "display_value": "11",
+      "value": 11
+    },
+    "u_employee_pir_tester": {
+      "display_value": "Katsiaryna Shchuchenka",
+      "value": "1c4a01ecdbbd9090a8c57d84f396199f"
+    },
+    "on_hold": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_itoc_aware": {
+      "display_value": "",
+      "value": ""
+    },
+    "risk_value": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_requires_security_review": {
+      "display_value": "false",
+      "value": false
+    },
+    "unauthorized": {
+      "display_value": "false",
+      "value": false
+    },
+    "u_dev_engr_db": {
+      "display_value": "",
+      "value": ""
+    },
+    "u_close_code": {
+      "display_value": "",
+      "value": ""
+    },
+    "category": {
+      "display_value": "Corporate Applications",
+      "value": "Corporate Applications"
+    },
+    "u_break_fix_secondary": {
+      "display_value": "",
+      "value": ""
+    }
+  }
+}

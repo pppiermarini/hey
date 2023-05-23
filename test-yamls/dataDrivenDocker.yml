@@ -1,0 +1,13 @@
+gitInfo:
+  gitYmlFile:
+  gitLoc:
+
+imageInfo:
+  imageName: hello-world
+configInfo:
+  logLoc:
+  configLoc: 
+    
+email:
+  emailDistribution: "rkale@incomm.com" #Testing: update ad-hoc,  , ppiermarini@incomm.com, vhari@incomm.com, dstovall@incomm.com, jrivett@incomm.com
+

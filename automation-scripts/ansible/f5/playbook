@@ -1,0 +1,4 @@
+- name: "Declarative: Deploy / teardown a service template (iApp)"
+  hosts: bigips
+  gather_facts: false
+  connection: local

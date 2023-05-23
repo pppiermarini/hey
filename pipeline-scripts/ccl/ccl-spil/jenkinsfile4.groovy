@@ -1,0 +1,424 @@
+import hudson.model.*
+import hudson.console.HyperlinkNote
+import hudson.AbortException
+import groovy.xml.MarkupBuilder
+import groovy.xml.*
+import groovy.util.*
+import groovy.json.*
+
+//#################
+// VTS-WebServices
+//#################
+
+@Library('pipeline-shared-library') _
+//  Modify for your BRANCHING
+//  you should have a development branch, a branch to merge and build when going to QA
+//  and then a release branch where the release is built typically master or trunk
+
+
+gitRepository = "https://github.com/InComm-Software-Development/ccl-spil.git"
+gitBranch = "${Branch}"
+gitCreds = "scm-incomm"
+
+// inputs from build with parameters
+userInput = "${BUILD_TYPE}"
+target_env = "${target_env}"
+test_suite = "${test_suite}"
+testName = "myTest"
+
+targets = [
+	'dev-a': ['sdcclappa01v.unx.incommtech.net'],
+    'dev-b': ['sdcclappb01v.unx.incommtech.net'],
+    'qa-a': ['sqcclappa01v.unx.incommtech.net'],
+    'qa-c': ['sqlcclappc01v.unx.incommtech.net'],
+    'qa-d': ['sqlcclappd01v.unx.incommtech.net'],
+	'qa-int': ['sqicclapp01v.unx.incommtech.net'],
+	'uat-2'  : ['succlapp02v.unx.incommtech.net'],
+    'uat-3'  : ['succlapp03v.unx.incommtech.net'],
+    'uat-4'  : ['succlapp04v.unx.incommtech.net'],
+    'uat-5'  : ['sulcclapp05v.unx.incommtech.net'],
+    'uat-6'  : ['sulcclapp06v.unx.incommtech.net'],
+    'uat-ui-2'  : ['sulcclui02v.unx.incommtech.net'],
+	'stg': ['sscclapp01fv.fastcard.local', 'sscclapp02fv.fastcard.local'],
+	'PROD-POOL1': ['spcclapp01fv.fastcard.local'],
+	'PROD-POOL2': ['spcclapp02fv.fastcard.local', 'spcclapp03fv.fastcard.local', 'spcclapp04fv.fastcard.local'],
+	'PROD-POOL3': ['spcclapp05fv.fastcard.local', 'spcclapp06fv.fastcard.local', 'spcclapp07fv.fastcard.local']
+]
+
+emailDistribution="ppiermarini@incomm.com dstovall@incomm.com vhari@incomm.com pchourasia@incomm.com psharma@incomm.com sdhumal@InComm.com rgopal@incomm.com abajaj@incomm.com mjoshi@InComm.com kloganathan@incomm.com"
+//General pipeline 
+pipelineData = "/app/pipeline-data/cclp-spil"
+artifactDeploymentLoc = "/srv/jboss-eap-7.0/standalone/deployments"
+def artifactloc = "${env.WORKSPACE}"
+
+serviceName = "jboss-eap"
+appname = ''
+tmpLocation = "/srv/jboss-eap-7.0/standalone/tmp"
+dataLocation = "/srv/jboss-eap-7.0/standalone/data"
+
+
+pipeline_id = "${env.BUILD_TAG}"
+maven = "/opt/apache-maven-3.2.1/bin/mvn"
+
+///Artifact Resolver	input specifics
+repoId = 'maven-release'
+groupId = 'com.incomm.cclp'
+artifactId = 'ccl-spil'
+env_propertyName = 'ART_VERSION'
+artExtension = 'war'
+artifactName = ''
+
+//globals
+userApprove = "Welcome to the new Jenkinsfile"
+envInput = "null"
+envlevel = "null"
+svnrevision = "null"
+relVersion = "null"
+sonarStatus = "null"
+serviceStatus = "null"
+
+currentBuild.result = 'SUCCESS'
+
+//userInput = InputAction()
+
+node('linux'){
+	try {
+
+		// check out the code no matter what. when promoting a release check out the release tag or branch so the
+		// proper configurations can be deployed
+		stage('checkout'){
+			cleanWs()
+			githubCheckout(gitCreds, gitRepository, gitBranch)
+		}
+
+		stage('Build'){
+
+			if (userInput == 'Build') {
+				//sonar  pipelineSonar  sonarqube.incomm.com
+				withSonarQubeEnv('sonarqube.incomm.com'){
+					sh "${maven} clean deploy -f pom.xml -U -B sonar:sonar -Dsonar.branch.name=${BRANCH}"
+					sh "cp target/${artifactId}*.${artExtension} ."
+					//sh "${maven} compile -f pom.xml  sonar:sonar"
+					//sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${sonarProjectName} -Dsonar.sources=app/"
+				}
+
+
+			} else if (userInput == 'Release') {
+
+				echo "Maven Release Build"
+				echo "Maven Release:Prepare..."
+				pom = readMavenPom file: 'pom.xml'
+				def mavenReleaseVersion = pom.getVersion();
+				echo " maven release= " + "${mavenReleaseVersion}"
+				sh "${maven} -B org.apache.maven.plugins:maven-release-plugin:2.5.3:prepare -Darguments='-Dmaven.javadoc.skip=true'"
+				sleep(3)
+				sh "${maven} -B org.apache.maven.plugins:maven-release-plugin:2.5.3:perform -Darguments='-Dmaven.javadoc.skip=true'"
+				sleep(4)
+				def str = mavenReleaseVersion.split('-');
+				def myrelease = str[0];
+				writeFile file: "mavenrelease", text: myrelease
+				//sh "/bin/cp -f mavenrelease ${pipelineData}/dev"
+
+			} else if (userInput == 'Test') {
+
+				echo "Running only tests"
+				
+			} else {
+				echo "no build"
+			}
+
+		} //stage
+
+
+		stage('Quality Gate'){
+
+			//sonarProjectName="hello-world-testing:hello-world"
+
+			if (userInput == 'Build') {
+
+				/*def scannerHome = tool 'SonarQube 3.0.3.778'
+
+				sleep(20) // this sleep needs to be here to delay checking for OK immediately or else it fails QG
+				sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${sonarProjectName} -Dsonar.sources=src/"
+
+				timeout(time: 1, unit: 'HOURS') {	
+					def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
+						if (qg.status != 'OK') {
+						error "Pipeline aborted due to quality gate failure: ${qg.status}"
+						}
+				echo "after QG timeout"
+				}
+
+			} else {
+				echo "Quality Gate not needed for Release or Promote"
+			}*/
+		}
+
+		stage('Approval'){
+            	
+			if (userInput == 'Promote'){
+
+               if ((target_env=='stg')||(target_env=='PROD-POOL1')||(target_env=='PROD-POOL2')||(target_env=='PROD-POOL3'))
+                {
+                    echo "Deploying to ${target_env} requires approval"
+                    operators= "['psharma', 'vhari', 'mjoshi']"
+                    def Deployment_approval = input message: 'Deploying to FCV', ok: 'Continue', parameters: [choice(choices: ['', 'Abort', 'Proceed'], description: 'Please confirm deployment', name: 'approval_status')], submitter: 'operators', submitterParameter: 'approver'
+                    echo "${Deployment_approval}"
+                    approval_status = "${Deployment_approval['approval_status']}"
+                    def operator = "${Deployment_approval['approver']}"
+					String op = operator.toString()
+
+                    if (approval_status == 'Proceed'){
+                        echo "Operator is ${operator}"
+                        if (operators.contains(op))
+      		            {
+                            echo "${operator} is allowed to deploy into ${target_env}"
+		                }
+		                else
+		                {
+		                    throw new Exception("Throw to stop pipeline as user not in approval list")
+		                }
+                    }else {
+                    throw new Exception("Throw to stop pipeline as user selected abort")
+                    }
+                }else{
+					echo "Deploying to ${target_env} doesn't required any approvals"
+				}
+			} 
+        }
+
+		//select the artifact 
+		stage('Get Artifact'){
+
+			if (userInput == 'Promote') {
+				getFromArtifactory()
+
+			} else {
+				echo "not getting artifact during this build type"
+			}
+
+		}
+
+		stage('Deployment'){
+			echo "This is where we do a bunch of stuff"
+
+			if ((userInput == 'Build') || (userInput == 'Promote')) {
+				if (userInput == 'Build') {
+					target_env = 'dev-a'
+					echo "Build always deployes to "
+				}
+				prelimEnv(target_env, relVersion)
+				echo "deploying to ${target_env}"
+				deployComponents(target_env, targets[target_env], "${artifactId}-${relVersion}.${artExtension}")
+				//md5SumCheck(targets[target_env],artifactDeploymentLoc,"${artifactId}-${relVersion}.${artExtension}","${artifactId}-${relVersion}.${artExtension}")
+
+			} else {
+				echo "not deploying during a release build"
+			}
+
+		}
+
+		stage('Testing'){
+			node('QAAutomation'){
+				cleanWs()
+				if ((userInput == 'Build') || (userInput == 'Promote') ||  (userInput == 'Test')) {
+					gitRepository = "https://github.com/InComm-Software-Development/ccl-qa-automation-spil"
+					gitBranch = ""
+					gitCreds = "scm-incomm"
+					dir('ccl-qa-automation-spil'){
+						githubCheckout(gitCreds, gitRepository, gitBranch)
+					}
+					if (isUnix()){
+					sh "java -jar ${ReadyAPI_License}/ready-api-license-manager-1.2.7.jar -s 10.42.97.167:1099 < ${ReadyAPI_License}/licensecode.txt"
+					} else
+					{
+						bat """java -jar ${ReadyAPI_License}\\ready-api-license-manager-1.2.7.jar -s 10.42.97.167:1099 < ${ReadyAPI_License}\\licensecode.txt"""
+					}
+
+					echo "running test suite: ${test_suite}"
+						echo "running at ${env.WORKSPACE}"
+					echo "running test runner: ${ReadyAPI_TestRunner}"
+
+					if(test_suite == "none"){
+						echo "no testsuite was selected, tests were not run."
+					} else {
+						if(test_suite == "all"){
+							SoapUIPro(environment: target_env, pathToProjectFile: "${env.WORKSPACE}/ccl-qa-automation-spil", pathToTestrunner: "${ReadyAPI_TestRunner}", projectPassword: '', testCase: '', testSuite: '')
+						}
+						else{
+							SoapUIPro(environment: target_env, pathToProjectFile: "${env.WORKSPACE}/ccl-qa-automation-spil", pathToTestrunner: "${ReadyAPI_TestRunner}", projectPassword: '', testCase: '' , testSuite: test_suite)
+						}
+						publishHTML(target: [
+							allowMissing: false,
+							alwaysLinkToLastBuild: false,
+							keepAll: true,
+							reportDir: 'ccl-qa-automation-spil/test-report/',
+							reportFiles: 'testResult.html',
+							reportName: "Test Report"
+						])
+						//smokeTesting(target_env, targets[target_env], testName)
+						zip zipFile: 'testResult.zip', archive: false, dir: 'ccl-qa-automation-spil/test-report/'
+						emailext attachLog: true,attachmentsPattern: 'testResult.zip',body: "${env.BUILD_URL}",subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - ${currentBuild.result}",mimeType: 'text/html',to: "${emailDistribution}"
+					}
+				} else {
+					echo "not testing during a release build"
+				}
+			}
+
+		}
+
+		echo "insie try block"
+
+	} catch (Exception e) {
+		//stage('Notification'){
+			echo "Something went wrong"
+			currentBuild.result = 'FAILURE'
+			//sendEmail(emailDistribution, gitBranch, userInput, target_env, userApprove)
+			//echo 'ERROR:  ' + exc.toString()
+			//throw exc
+		//}
+
+	} finally {
+		if (currentBuild.result == "FAILURE"){
+		echo "if failure"
+		
+		emailext attachLog: true,body: "${env.BUILD_URL}",subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - ${currentBuild.result}",mimeType: 'text/html',to: "${emailDistribution}"
+
+		//sendEmail(emailDistribution, envlevel, userInput, envInput, "ERROR")
+
+	}else if(currentBuild.result == "SUCCESS"){
+		echo "if success"
+		emailext attachLog: true,body: "${env.BUILD_URL}",subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - ${currentBuild.result}",mimeType: 'text/html',to: "${emailDistribution}"
+
+		//sendEmail(emailDistribution, envlevel, userInput, envInput, "SUCCESS")
+
+	}
+	}
+
+} //end of node
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////  Methods and functions and calls Oh My  ///////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+def prelimEnv(target_env, relVersion){
+
+	// prelim staging if needed
+
+	echo "${target_env}"
+	echo "Selected=  ${artifactId}-${relVersion}.${artExtension}"
+	echo "DEPLOYING TO ${target_env}"
+	echo "relVersion= ${relVersion}"
+	writeFile file: "relVersion.txt", text: relVersion
+
+	echo "DEPLOYING TO ${target_env}"
+
+	localArtifact = "${artifactId}-${relVersion}.${artExtension}"
+	remoteArtifact = "${artifactId}-${relVersion}.${artExtension}"
+
+	echo " local artifact=  $localArtifact"
+	echo "remote artifact=  $remoteArtifact"
+}
+
+
+def deployComponents(envName, targets, Artifact){
+
+	echo "my env= ${envName}"
+	def stepsInParallel = targets.collectEntries {
+		["$it" : { deploy(it, artifactDeploymentLoc, Artifact) }]
+	}
+	parallel stepsInParallel
+
+}
+
+
+def deploy(target_hostname, artifactDeploymentLoc, Artifact) {
+
+	echo " the target is: ${target_hostname}"
+	/*		if ((target_env=='stg')||(target_env=='PROD-POOL1')||(target_env=='PROD-POOL2')||(target_env=='PROD-POOL3')){
+			serviceName	= "${serviceName}"
+		}*/
+	sh """
+			ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${target_hostname} '/bin/systemctl stop "${serviceName}.service" > /dev/null'
+            ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${target_hostname} '/bin/rm -rf ${tmpLocation}'
+		    ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${target_hostname} '/bin/rm -rf ${dataLocation}'
+			ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${target_hostname} 'rm -rfv $artifactDeploymentLoc/${artifactId}*'
+			scp -q -i ~/.ssh/pipeline ${artifactId}*.${artExtension} root@${target_hostname}:$artifactDeploymentLoc/
+			ssh -q -i /app/jenkins/.ssh/pipeline root@${target_hostname} '/bin/chown -R jboss:jboss $artifactDeploymentLoc/${artifactId}*.${artExtension}'
+			ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${target_hostname} '/bin/systemctl start "${serviceName}.service" > /dev/null'
+			sleep 40
+			ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${target_hostname} '/bin/find /srv/jboss-eap-7.0/standalone/deployments/ -type f -name ${artifactId}*.failed | wc -l' > commandresult
+	"""
+	def r = readFile('commandresult').trim()
+	echo "arr= p${r}p"
+	if (r == "1") {
+		echo "failed deployment"
+		currentBuild.result = 'FAILED'
+	} else {
+		echo "checking for deployed"
+	}
+	try {
+		timeout(2) {
+			waitUntil {
+				sh """ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${target_hostname} '/bin/find /srv/jboss-eap-7.0/standalone/deployments/ -type f -name ${artifactId}*.deployed | wc -l' > commandresult"""
+				def a = readFile('commandresult').trim()
+				echo "arr= p${a}p"
+				sleep(15)
+				if (a == "1") {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+		}
+	} catch (exception) {
+		echo "${artifactId}-${relVersion}.${artExtension} did NOT deploy properly. Please investigate"
+		abortMessage = "${artifactId}-${relVersion}.${artExtension} did NOT deploy properly. Please investigate"
+		currentBuild.result = 'FAILED'
+	}
+}
+
+
+def getFromArtifactory(){
+	if (userInput == "Promote") {
+		echo "Select an artifact from Artifacory"
+
+		relVersion = getMyArtifact(repoId, groupId, artifactId, artExtension, artifactName)
+
+		echo "Selected Artifact=  ${artifactId}-${relVersion}.${artExtension}"
+	} else {
+		echo "not promoting-Skipping"
+	}
+}
+
+def smokeTesting(envName, targets, testName){
+
+	echo "my env= ${envName}"
+	def stepsInParallel = targets.collectEntries {
+		["$it" : { tests(it, envName, testName) }]
+	}
+	parallel stepsInParallel
+
+}//end smoketesting
+
+def tests(target, envName, testName){
+
+	echo " Smoke Testing on ${target}"
+	echo "my test = ${testName}"
+	sleep(1)
+	dir('testresults'){
+		//println "Run Test Script"
+		//http://localhost:1505/lisa-invoke/runTest?testCasePath=Projects\\AppleIT\\Tests\\AppleDevTest.tst -OutFile testResults.xml -Verbose
+		// String results = readFile 'testresults.xml'
+	}
+	//if(1 ){
+	//	println "ERROR todo "
+	//} else {
+	//	println "results"
+	//}
+}
+
+
+///// The End

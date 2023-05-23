@@ -1,0 +1,560 @@
+Date: Wed, 26 Jan 2022 23:50:55 +0000 (UTC)
+Message-ID: <1964375154.17.1643241055412@19725549a1eb>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_16_6896743.1643241055412"
+
+------=_Part_16_6896743.1643241055412
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Sprint 17-19 UAT - Jan (Tue, Jan 11 - Tue, Jan 18) - Approved</t=
+itle>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Sprint 17-19 UAT - Jan (Tue, Jan 11 - Tue, Jan 18) - Approved</h1>
+    <div class=3D"Section1">
+        <p></p>
+<h1 id=3D"Sprint17-19UAT-Jan(Tue,Jan11-Tue,Jan18)-Approved-Issuesraised:">I=
+ssues raised:</h1>
+<p>Label "<strong>UAT_19_SELLIT</strong>"</p>
+<p></p>
+<p>Jira</p>=20
+<div id=3D"refresh-module-713327630" class=3D"confluence-jim-macro refresh-=
+module-id jira-table">=20
+<p> </p>
+<div id=3D"jira-issues-713327630" style=3D"width: 100%;  overflow: auto;" c=
+lass=3D"jira-issues">=20
+<table class=3D"aui">=20
+<tbody>=20
+<tr></tr>=20
+<tr>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Key</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Summary</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">T</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Created</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Updated</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Due</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Assignee</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Reporter</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">P</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Status</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Resolution</span></th>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7261?src=3Dconfmac=
+ro">FRNTOFF-7261</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7261?src=3Dconfmacro"> Task creati=
+on: Submit button becomes available if big Task for All Albertsons Company =
+created and got 504 error on BE due to DB high load </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7261?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> 11/Jan/=
+22 6:31 AM </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> Yesterd=
+ay 5:30 AM </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Daniil Yurov </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div>=20
+<div class=3D"refresh-issues-bottom"> <span id=3D"total-issues-count" class=
+=3D"total-issues-count"> <a rel=3D"nofollow" title=3D"View all matching iss=
+ues in JIRA." href=3D"https://incomm-payments.atlassian.net/secure/IssueNav=
+igator.jspa?reset=3Dtrue&amp;jqlQuery=3Dproject+%3D+FRNTOFF+AND+issuetype+i=
+n+%28Story%2CBug%29+AND+labels+in+%28UAT_19_SELLIT%29+ORDER+BY+type+ASC++++=
++++++&amp;src=3Dconfmacro"> 1 issue </a> </span>=20
+</div>=20
+<p></p>=20
+</div>=20
+<p></p>
+<h1 id=3D"Sprint17-19UAT-Jan(Tue,Jan11-Tue,Jan18)-Approved-Scope:">Scope:</=
+h1>
+<p><strong><span style=3D"color: rgb(54,179,126);">APPROVED - 01.25.22</spa=
+n></strong></p>
+<p></p>
+<div class=3D"table-wrap">
+<table data-layout=3D"wide" data-local-id=3D"96466f14-a758-403b-80ac-da2f5a=
+0661ab" class=3D"confluenceTable">
+<colgroup>
+<col style=3D"width: 180.0px;">
+<col style=3D"width: 145.0px;">
+<col style=3D"width: 145.0px;">
+<col style=3D"width: 145.0px;">
+<col style=3D"width: 145.0px;">
+<col style=3D"width: 151.0px;">
+<col style=3D"width: 160.0px;">
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh"><p>Key</p></th>
+<th class=3D"confluenceTh"><p>Summary</p></th>
+<th class=3D"confluenceTh"><p>Epic Link</p></th>
+<th class=3D"confluenceTh"><p>Internal UAT Response</p></th>
+<th class=3D"confluenceTh"><p>External UAT Response</p></th>
+<th class=3D"confluenceTh"><p><strong>Comments</strong></p></th>
+<th class=3D"confluenceTh"><p></p></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6823" rel=3D"nofollow">FRNTOFF-6=
+823</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6823" rel=3D"nofollow">CR - Add =
+Two fields to Task Management Page</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-4303" rel=3D"nofollow">Tasks</a>=
+</p></td>
+<td class=3D"confluenceTd"><p>RL 20220115</p></td>
+<td class=3D"confluenceTd"><p>&nbsp;</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6799" rel=3D"nofollow">FRNTOFF-6=
+799</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6799" rel=3D"nofollow">Add User =
+Guide for Internal Users</a></p></td>
+<td class=3D"confluenceTd"><p>&nbsp;</p></td>
+<td class=3D"confluenceTd"><p>RL 20220115</p></td>
+<td class=3D"confluenceTd"><p>&nbsp;</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6353" rel=3D"nofollow">FRNTOFF-6=
+353</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6353" rel=3D"nofollow">Manage Or=
+der Icon business days in system settings</a></p></td>
+<td class=3D"confluenceTd"><p>&nbsp;</p></td>
+<td class=3D"confluenceTd"><p>RL 20220116</p></td>
+<td data-highlight-colour=3D"#ffffff" class=3D"confluenceTd"><p>&nbsp;</p><=
+/td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6151" rel=3D"nofollow">FRNTOFF-6=
+151</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6151" rel=3D"nofollow">Store war=
+ehouse of origin as part of data processing in Sell-IT</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3496" rel=3D"nofollow">Store Ord=
+ers</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p>&nbsp;</p></td>
+<td class=3D"confluenceTd"><p>I do not have access to the DB therefore I ca=
+nnot validate. Approved based on QA test</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6744" rel=3D"nofollow">FRNTOFF-6=
+744</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6744" rel=3D"nofollow">Messages:=
+ Get Message Statistics for each message sent by user</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3524" rel=3D"nofollow">In-App Me=
+ssages</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220125</p></td>
+<td class=3D"confluenceTd"><p>&nbsp;</p></td>
+<td class=3D"confluenceTd"><p>How can I access message statistics?</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6144" rel=3D"nofollow">FRNTOFF-6=
+144</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6144" rel=3D"nofollow">MAM Admin=
+: apply permissions to manage settings on Merchant level</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-4556" rel=3D"nofollow">System Ad=
+ministration</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p>&nbsp;</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6145" rel=3D"nofollow">FRNTOFF-6=
+145</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6145" rel=3D"nofollow">[Enhancem=
+ent]Admin Settings: apply success confirmation message</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-4556" rel=3D"nofollow">System Ad=
+ministration</a> </p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-5568" rel=3D"nofollow">FRNTOFF-5=
+568</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-5568" rel=3D"nofollow">[View Act=
+ivities] Allow user to search 6 months using advance search</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3946" rel=3D"nofollow">Dashboard=
+</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7038" rel=3D"nofollow">FRNTOFF-7=
+038</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7038" rel=3D"nofollow">Order Imp=
+ort Job Optimization</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7036" rel=3D"nofollow">Batch Job=
+ Optimization</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>Optimization, cannot validate. Approved based=
+ on QA results</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7037" rel=3D"nofollow">FRNTOFF-7=
+037</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7037" rel=3D"nofollow">Inventory=
+ Import Job Optimization</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7036" rel=3D"nofollow">Batch Job=
+ Optimization</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>Optimization, cannot validate. Approved based=
+ on QA results</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7039" rel=3D"nofollow">FRNTOFF-7=
+039</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7039" rel=3D"nofollow">Shipment =
+Import Job Optimization</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7036" rel=3D"nofollow">Batch Job=
+ Optimization</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>Optimization, cannot validate. Approved based=
+ on QA results</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7040" rel=3D"nofollow">FRNTOFF-7=
+040</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7040" rel=3D"nofollow">Sales Imp=
+ort Job Optimization</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7036" rel=3D"nofollow">Batch Job=
+ Optimization</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>Optimization, cannot validate. Approved based=
+ on QA results</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6143" rel=3D"nofollow">FRNTOFF-6=
+143</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-6143" rel=3D"nofollow">[Alerts] =
+Notify Logistic Team if SLA on file receiving is missed</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3635" rel=3D"nofollow">System No=
+tifications</a></p></td>
+<td class=3D"confluenceTd"><p>RL 20220121 </p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>Validated three types of report</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+    </div>
+</body>
+</html>
+------=_Part_16_6896743.1643241055412--

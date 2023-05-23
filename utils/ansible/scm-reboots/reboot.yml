@@ -1,0 +1,25 @@
+ - hosts: all
+   gather_facts: no
+   serial: 1
+   become: yes
+   tasks:
+     - name: "check patch version"
+       shell: hostnamectl | grep Kernel
+       register: patch_version
+     - debug:
+         msg: "{{ patch_version.stdout }}"
+     - name: "performing reboot on the server"
+       reboot:
+          msg: "reboot initiated by Ansible"
+          reboot_timeout: 300
+          post_reboot_delay: 10
+     - name: "check the uptime of the server after reboot"
+       shell: uptime
+       register: Uptime
+     - debug:
+         msg: "{{ Uptime.stdout }}"
+     - name: "check the patch version after reboot"
+       shell: hostnamectl | grep Kernel
+       register: patch_version_after_reboot
+     - debug:
+         msg: "{{ patch_version_after_reboot.stdout }}"

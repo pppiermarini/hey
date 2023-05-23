@@ -1,0 +1,749 @@
+import hudson.model.*
+import hudson.console.HyperlinkNote
+import hudson.AbortException
+import java.text.SimpleDateFormat
+import java.lang.*
+import groovy.xml.*
+import groovy.util.*
+import groovy.json.*
+
+
+@Library('pipeline-shared-library') _
+//  you should have a development branch, a branch to merge and build when going to QA
+//  and then a release branch where the release is built typically master or trunk
+//
+// 
+
+
+// Application Code Repo
+developmentBranch_masterdata_api_apps="https://svn.incomm.com/svn/devel/tp/inVision/master-data-api/branches/1.64.0/masterdata"
+releaseTrunk_masterdata_api_apps="https://svn.incomm.com/svn/devel/tp/inVision/master-data-api/trunk/masterdata"
+
+developmentBranch_masterdatainterface_ibo_apps="https://svn.incomm.com/svn/devel/tp/inVision/master-data-ibo-interface/branches/1.64.0/masterdatainterface-ibo"
+releaseTrunk_masterdatainterface_ibo_apps="https://svn.incomm.com/svn/devel/tp/inVision/master-data-ibo-interface/trunk/masterdatainterface-ibo"
+
+developmentBranch_masterdata_management_apps="https://svn.incomm.com/svn/devel/tp/inVision/master-data-management/branches/1.64.0"
+releaseTrunk_masterdata_management_apps="https://svn.incomm.com/svn/devel/tp/inVision/master-data-management/trunk"
+
+developmentBranch_masterdata_rest_apps="https://svn.incomm.com/svn/devel/tp/inVision/masterdata-rest/branches/1.64.0"
+releaseTrunk_masterdata_rest_apps="https://svn.incomm.com/svn/devel/tp/inVision/masterdata-rest/trunk"
+
+developmentBranch_masterdata_rest_finance_apps="https://svn.incomm.com/svn/devel/tp/inVision/masterdata-rest-finance/branches/1.64.0"
+releaseTrunk_masterdata_rest_finance_apps="https://svn.incomm.com/svn/devel/tp/inVision/masterdata-rest-finance/trunk"
+
+// Docker Code Repo
+// '/' at the end of this url is required. do not remove that
+developmentBranch_Docker="https://svn.incomm.com/svn/devel/tp/inVision/docker-ibo-pipeline/branches/"
+releaseTrunk_Docker="https://svn.incomm.com/svn/devel/tp/inVision/docker-ibo-pipeline/trunk/docker-ibo-mdm-pipeline/"
+
+// maven artifactory
+HOST_PORT="maven.incomm.com"
+
+emailDistribution="middleofficeownership@incomm.com"
+//emailDistribution="schahanapally@incomm.com ppiermarini@incomm.com"
+
+//General pipeline 
+srcArtifactLocation="${env.WORKSPACE}"
+pipelineData="/app/pipeline-data/ibo-mdm-docker-pipeline"
+dockerBuildScriptDir="build-docker-image"
+dockerDeployScriptDir="deploy-docker-image"
+rpmExtractDir = "${dockerDeployScriptDir}/rpm_extract/"
+pipeline_id="${env.BUILD_TAG}"
+maven="/opt/apache-maven-3.2.1/bin/mvn"
+
+//globals
+userApprove="null"
+userInput="null"
+envInput="null"
+target_env="null"
+
+//for deployment approvals
+def approver = ''
+def approval_status = '' 
+def operators = []
+approvalData = [
+	'operators': "[ppiermarini,vhari,rkale,glindsey,jwhiteley,smathialagan,bmekonnen]",
+	'adUserOrGroup' : 'ppiermarini,vhari,rkale,glindsey,jwhiteley,smathialagan,bmekonnen',
+	'target_env' : "${target_env}"
+]
+
+localArtifact="null"
+svnrevision="null"
+relVersion="null"
+//userInput = InputAction() // TODO options to be code build/Docker Build/Docker deploy
+echo "Lib User Input = $userInput"
+
+// maven artifactory path
+war__masterdata_management="masterdata-management-{0}.0-SNAPSHOT.war"
+mavenRepo__masterdata_management="https://$HOST_PORT/artifactory/repo/com/incomm/masterdata/management/masterdata-management"
+
+war__masterdatainterface_ws="masterdatainterface-ws-{0}.0-SNAPSHOT.war"
+mavenRepo__masterdatainterface_ws="https://$HOST_PORT/artifactory/repo/com/incomm/ibointerface/masterdatainterface-ws"
+
+war__masterdata_scheduler="masterdata-scheduler-{0}.0-SNAPSHOT.war"
+mavenRepo__masterdata_scheduler="https://$HOST_PORT/artifactory/repo/com/incomm/masterdata/masterdata-scheduler"
+
+war__masterdata_rest="masterdata-rest-{0}.0-SNAPSHOT.war"
+mavenRepo__masterdata_rest="https://$HOST_PORT/artifactory/repo/com/incomm/masterdata/rest/masterdata-rest"
+
+war__masterdata_rest_finance="masterdata-rest-finance-{0}.0-SNAPSHOT.war"
+mavenRepo__masterdata_rest_finance="https://$HOST_PORT/artifactory/repo/com/incomm/masterdata/rest/finance/masterdata-rest-finance"
+
+codeBuildJobParam_masterdata_api="trunk"
+codeBuildJobParam_masterdatainterface_ibo="trunk"
+codeBuildJobParam_masterdata_management="trunk"
+codeBuildJobParam_masterdata_rest="trunk"
+codeBuildJobParam_masterdata_rest_finance="trunk"
+branchVersion=""
+finalSVNPath_Docker = "trunk"
+dockerBranchVersion="8.0.0"
+
+//variables
+buildType = 'Dev Build'
+userInputCodeSource = "trunk"
+userInputDockerScriptSource = ""
+devBuildJenkinsPath = ""
+prodReadyBuildJenkinsPath = ""
+envlevel="null"
+instanceInput="null"
+instanceInput_fdt_all_lle=["fdt01", "fdt02"]
+instanceInput_ict_all_lle=["ict01", "ict02"]
+hostMap = [:]
+hostMap.dev_host_fdt01 = "sdibomdm01v.unx.incommtech.net"
+//hostMap.dev_host_fdt01 = "spliboappfdt01bv.unx.incommtech.net"// TODO Only for testing purpose. DO NOT uncomment if you don't need this.
+hostMap.dev_host_fdt02 = "sdibomdm02v.unx.incommtech.net"
+dev_all_host_fdt = ["sdibomdm01v.unx.incommtech.net", "sdibomdm02v.unx.incommtech.net"]
+hostMap.dev_host_ict01 = "sdibomdmict01v.unx.incommtech.net"
+dev_all_host_ict = ["sdibomdmict01v.unx.incommtech.net"]
+hostMap.qa_host_fdt01 = "sqibomdm01v.unx.incommtech.net"
+hostMap.qa_host_fdt02 = "sqibomdm02v.unx.incommtech.net"
+qa_all_host_fdt = ["sqibomdm01v.unx.incommtech.net", "sqibomdm02v.unx.incommtech.net"]
+hostMap.qa_host_ict01 = "sqibomdmict01v.unx.incommtech.net"
+qa_all_host_ict = ["sqibomdmict01v.unx.incommtech.net"]
+hostMap.uat_host_fdt01 = "sulibomdm03av.unx.incommtech.net"
+//hostMap.uat_host_fdt02 = "sulibomdm04av.unx.incommtech.net" //host name not resolving
+hostMap.uat_host_fdt02 = "10.42.49.141"
+uat_all_host_fdt = ["sulibomdm03av.unx.incommtech.net", "sulibomdm04av.unx.incommtech.net"]
+//uat_all_host_fdt = ["sulibomdm03av.unx.incommtech.net", "10.42.49.141"]
+hostMap.uat_host_ict01 = ""
+uat_all_host_ict = [""]
+instance_Prod=["qtsfdt01", "qtsfdt02", "qtsict01", "qtsict02", "qtsbat01", "qtsbat02"]
+prod_host_all=["spibomdmfdt01v.unx.incommtech.net", "spibomdmfdt02v.unx.incommtech.net", "spibomdmict01v.unx.incommtech.net", "spibomdmict02v.unx.incommtech.net", "spibomdmbat01v.unx.incommtech.net", "spibomdmbat02v.unx.incommtech.net"]
+envInput_lowerCase = ""
+
+// [MOOD-1399]  remove dynatrace appmon configuration from IBO APP & IBO MDM
+// Dynatrace settings
+//DYNATRACE_HOME="/opt/dynatrace/dynatrace-6.5.0"
+//DYNATRACE_PORT="9994"
+//DYNATRACE_HOST="atdynat02.privatecloud.local"
+//ENV_ID=$1
+//INSTANCE_ID=$2
+//INSTANCE_GROUP="FDT"
+//DYNATRACE_ID="IBOMDM_FDT"
+// END Dynatrace settings
+mdmENVid="DEVFDT01"
+IMAGE_ID=""
+imageTagVersion=""
+
+node('docker') {
+
+	try {
+		cleanWs()
+		stage('input') {
+			try {
+				timeout(time: 30, unit: 'SECONDS') {
+					userInput = input message: 'User input required', ok: 'Continue',
+						parameters: [choice(name: 'Build Dev or Promote?', choices: 'Build\nDocker Build\nPromote', defaultValue: Build, description: 'Build or Promote?')]
+				}
+				echo "${env.userInput}"
+				echo "selection"
+			} catch(err) {
+				echo "catch but let it go"
+				env.userInput="Build"
+				echo "${env.userInput}"
+			}
+		} //input
+//envInput = 'DEV'//TODO testing delete
+		if (userInput == 'Build') {
+
+			envInput = "DEV" // with userInput as 'Build', envInput will be default 'DEV' to deploy.
+
+			stage ('Prepare for Build') {
+
+				timeout(time: 30, unit: 'SECONDS') {
+					buildType = input message: 'User input required', ok: 'Continue', 
+					parameters: [choice(name: 'Select Build Type', choices: 'Dev Build\nGA Build', defaultValue: 'Dev Build', description: 'Dev or GA Build?')]
+	    		}
+	    		echo "buildType selected as ${buildType}"
+
+				timeout(time: 30, unit: 'SECONDS') {
+					userInputCodeSource = input message: 'User input required', ok: 'Continue', 
+					parameters: [choice(name: 'Select Build Source', choices: 'trunk\nbranches', defaultValue: 'branches', description: 'trunk or branches?')]
+	    		}
+	    		echo "Build Source selected as ${userInputCodeSource}"
+
+	    		if(userInputCodeSource == 'branches') {
+	    			branchVersion = input(id: 'userInput', message: 'Enter Branch version number:?', 
+	    				parameters: [
+	    					string(
+	    						defaultValue: '1.64.0',
+	    						description: 'Branch',
+	    						name: 'Branch_version_number'
+	    					)
+	    				])
+	    			echo "branch version input as ${userInputCodeSource}"
+
+					codeBuildJobParam_masterdata_api = 'branches/' + branchVersion
+					codeBuildJobParam_masterdatainterface_ibo = 'branches/' + branchVersion
+					codeBuildJobParam_masterdata_management = 'branches/' + branchVersion
+					codeBuildJobParam_masterdata_rest = 'branches/' + branchVersion
+					codeBuildJobParam_masterdata_rest_finance = 'branches/' + branchVersion
+
+				}
+
+				echo "masterdata_api code to build from ${codeBuildJobParam_masterdata_api}"
+				echo "masterdatainterface_ibo code to build from ${codeBuildJobParam_masterdatainterface_ibo}"
+				echo "masterdata_management code to build from ${codeBuildJobParam_masterdata_management}"
+				echo "masterdata_rest code to build from ${codeBuildJobParam_masterdata_rest}"
+				echo "masterdata_rest_finance code to build from ${codeBuildJobParam_masterdata_rest_finance}"
+
+			} // end of 'Prepare for Build'
+
+			stage('Code Build and SonarQube Analysis') {
+				
+				if (buildType == 'Dev Build') {
+					echo "triggering ${buildType}"
+					// trigger 'Dev Build' Jenkins job with Sonarcube Analysis
+					// TODO does this job has SonarQube configured?
+					build job: 'Master_Data_API_DevBuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdata_api}"]]
+					build job: 'Masterdata_IBO_Interface_DevBuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdatainterface_ibo}"]]
+					build job: 'Masterdata_Management_DevBuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdata_management}"]]
+					build job: 'Masterdata_REST_DevBuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdata_rest}"]]
+					build job: 'Masterdata_REST_Finance_DevBuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdata_rest_finance}"]]
+
+					//withSonarQubeEnv('sonar') {
+					//	sh "${maven} clean deploy -e -U -DskipTests=true sonar:sonar -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true"
+					//	sh "svn info --show-item revision > svnrevision"
+					//	svnrevision = readFile 'svnrevision'
+					//	echo "svnrevision" + "${svnrevision}"
+					//}
+				}
+
+				//General Availability Build
+				if (buildType == 'GA Build') {
+					echo "triggering ${buildType}"
+					// trigger 'GA Build' Jenkins job with Sonarcube Analysis
+					// TODO does this job has SonarQube configured?
+					build job: 'Master_Data_API_GABuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdata_api}"]]
+					build job: 'Masterdata_IBO_Interface_GABuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdatainterface_ibo}"]]
+					build job: 'Masterdata_Management_GABuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdata_management}"]]
+					build job: 'Masterdata_REST_GABuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdata_rest}"]]
+					build job: 'Masterdata_REST_Finance_GABuild', parameters: [[$class: 'StringParameterValue', name: 'source', value: "${codeBuildJobParam_masterdata_rest_finance}"]]
+
+					//withSonarQubeEnv('sonar') {
+					//	sh "${maven} clean deploy -e -U -DskipTests=true sonar:sonar -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true"
+					//	sh "svn info --show-item revision > svnrevision"
+					//	svnrevision = readFile 'svnrevision'
+					//	echo "svnrevision" + "${svnrevision}"
+					//}
+				}
+			} // end of 'Code Build and SonarQube Analysis'
+
+			dockerBuild() // prepare & build Docker Image
+			deploymentStage()
+		} else if (userInput == 'Docker Build') {
+			echo "Docker Build stage..."
+			dockerBuild()
+		} else if (userInput == 'Promote') {
+			echo "Promote Docker Deploy stage..."
+			deploymentStage()
+		} else {
+			echo "No User Input Action to proceed with Pipeline process..."
+		}
+	} catch (any) {
+		echo "caught ${any}"
+        currentBuild.result = 'FAILURE'
+    } finally {
+	
+		if ((envlevel == "Production") && (currentBuild.result == "SUCCESS")){
+			sendEmail(emailDistribution, envlevel, userInput, envInput)
+		} else if((envlevel == "Production") && (currentBuild.result == "FAILURE")){
+			sendEmail(emailDistribution, envlevel, userInput, envInput)
+		} else{
+			sendEmail(emailDistribution, envlevel, userInput, envInput)
+			//notify ('scm-jenkins', 'slack', 'SUCCESSFUL') This is how you slack
+		}
+	}
+} //end node
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////FUNCTIONS//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// prepare & build Docker Image
+def dockerBuild() {
+
+	stage ('Prepare for Docker Build') {
+		echo "Prepare for Docker Build..."
+
+		chooseEnvLevelAndEnvName() // choose env level and env name
+
+		timeout(time: 30, unit: 'SECONDS') {
+			userInputDockerScriptSource = input message: 'User input required', ok: 'Continue', 
+			parameters: [choice(name: 'Select Docker Scripts Source', choices: 'trunk\nbranches', defaultValue: 'branches', description: 'trunk or branches?')]
+		}
+
+		//userInputDockerScriptSource="trunk"
+		echo "userInput for Docker Script Source ${userInputDockerScriptSource}"
+
+		constructDockerBuildSVNPath()
+		echo "Docker Script to export from ${finalSVNPath_Docker}"
+
+		// export Docker Scripts
+		sh "svn export ${finalSVNPath_Docker}"
+
+		if("" == branchVersion || "null" == branchVersion)  {
+			branchVersion = input(id: 'userInput', message: 'Enter Application version number:?', 
+			parameters: [
+				string(
+					defaultValue: '1.64.0',
+					description: 'Application version number',
+					name: 'Application_version_number'
+				)
+			])
+		}
+		echo "application version input as ${branchVersion}"
+
+		dir(dockerBuildScriptDir) {
+			// download .war files from Maven repo
+			//replace placeholder with branchVersion value
+			war__masterdata_management = war__masterdata_management.replace('{0}',branchVersion)
+			war__masterdatainterface_ws = war__masterdatainterface_ws.replace('{0}',branchVersion)
+			war__masterdata_scheduler = war__masterdata_scheduler.replace('{0}',branchVersion)
+			war__masterdata_rest = war__masterdata_rest.replace('{0}',branchVersion)
+			war__masterdata_rest_finance = war__masterdata_rest_finance.replace('{0}',branchVersion)
+
+		    sh "wget -O masterdata-management.war ${mavenRepo__masterdata_management}/${branchVersion}.0-SNAPSHOT/${war__masterdata_management}"
+			sh "wget -O masterdatainterface-ws.war ${mavenRepo__masterdatainterface_ws}/${branchVersion}.0-SNAPSHOT/${war__masterdatainterface_ws}"
+			sh "wget -O masterdata-scheduler.war ${mavenRepo__masterdata_scheduler}/${branchVersion}.0-SNAPSHOT/${war__masterdata_scheduler}"
+			sh "wget -O masterdata-rest.war ${mavenRepo__masterdata_rest}/${branchVersion}.0-SNAPSHOT/${war__masterdata_rest}"
+			sh "wget -O masterdata-rest-finance.war ${mavenRepo__masterdata_rest_finance}/${branchVersion}.0-SNAPSHOT/${war__masterdata_rest_finance}"
+
+		    echo "list of Docker Script dir... "
+			sh "ls -ltr"
+
+			if (envInput != 'PROD') {
+				timeout(time: 30, unit: 'SECONDS') {
+					instanceInput = input message: 'User input required', ok: 'Continue',
+				 		parameters: [choice(name: 'applicationInstanceName', choices: 'fdt01\nfdt02\nict01\nict02\nfdt_all\nict_all', description: 'Select Application Instance')]
+				}
+			}
+			echo "instanceInput selected to build docker image is ${instanceInput} ..."
+		}
+	}
+
+	stage ('Docker Build') {
+		echo "Docker Build..."
+
+		dir(dockerBuildScriptDir) {
+
+			if (envInput != 'PROD') {
+
+				if ("${instanceInput}" == "fdt_all") {
+					for (i = 0; i < instanceInput_fdt_all_lle.size(); i++) {
+
+						instanceName="${instanceInput_fdt_all_lle[i]}"
+						echo "IBO Instance name ${instanceInput}"
+
+						// [MOOD-1399]  remove dynatrace appmon configuration from IBO APP & IBO MDM
+						// dynatraceUpdate(instanceName) // update Dynatrace configs
+						configUpdate(instanceName) // update config values
+						buildAndPushImage(instanceName) // build & save Docker Image
+					}
+				} else if ("${instanceInput}" == "ict_all") {
+					for (i = 0; i < instanceInput_ict_all_lle.size(); i++) {
+
+						instanceName="${instanceInput_fdt_all_lle[i]}"
+						echo "ICT Instance name ${instanceInput}" 
+
+						// [MOOD-1399]  remove dynatrace appmon configuration from IBO APP & IBO MDM
+						// dynatraceUpdate(instanceName) // update Dynatrace configs
+						configUpdate(instanceName) // update config values
+						buildAndPushImage(instanceName) // build & save Docker Image
+					}
+				} else {
+					// [MOOD-1399]  remove dynatrace appmon configuration from IBO APP & IBO MDM
+					// dynatraceUpdate(instanceInput) // update Dynatrace configs
+					configUpdate(instanceInput) // update config values
+					buildAndPushImage(instanceInput) // build & save Docker Image
+				}
+			} else {
+				for (i = 0; i < instance_Prod.size(); i++) {
+
+					instanceName="${instance_Prod[i]}"
+					echo "Prod Instance name ${instanceInput}" 
+
+					// [MOOD-1399]  remove dynatrace appmon configuration from IBO APP & IBO MDM
+					// dynatraceUpdate(instanceName) // update Dynatrace configs
+					configUpdate(instanceName) // update config values
+					buildAndPushImage(instanceName) // build & save Docker Image
+				}
+			}
+
+			echo "list of files "
+			sh "ls -ltr"
+		}
+	}
+} // end of 'Docker Build'
+
+def chooseEnvLevelAndEnvName() {
+	if(envInput != 'DEV') {
+
+		timeout(time: 30, unit: 'SECONDS') {
+			envlevel = input message: 'User input required', ok: 'Continue', 
+				parameters: [choice(name: 'chooseEnvLevel', choices: 'Lower\nProduction', description: 'Choose Production or Lower level environment?')]
+		}
+		echo "envlevel selected as ${envlevel}"
+		
+		if (envlevel == 'Lower') {
+			timeout(time: 30, unit: 'SECONDS') {
+				envInput = input message: 'User input required', ok: 'Continue',
+			 		parameters: [choice(name: 'chooseEnvInput', choices: 'QA\nUAT\nDEV', description: 'Select Environment')]
+			}
+		} else {
+			envInput='PROD'
+		}
+		echo "envInput selected as ${envInput}"
+	}
+
+	if(envInput != 'PROD') {
+		envInput_lowerCase = envInput.toLowerCase()
+	} else {
+		envInput_lowerCase="prd" // this is the env name being used in all config file names.
+	}
+
+	echo "envInput_lowerCase is ${envInput_lowerCase}"
+}
+
+// [MOOD-1399]  remove dynatrace appmon configuration from IBO APP & IBO MDM
+/* def dynatraceUpdate(instanceName) {
+	echo "instanceName passed Dynatrace config is ${instanceName} ..."
+
+	if (envInput == 'PROD') {
+		if ("${instanceName}" == 'qts*01') {
+			DYNATRACE_HOST="spdynat05v.unx.incommtech.net"
+		} else {
+			DYNATRACE_HOST="spdynat06v.unx.incommtech.net"
+		}
+
+		if ("${instanceName}" == 'qtsfdt*') {
+			INSTANCE_GROUP="FDT"
+			DYNATRACE_PORT="9995"
+		} else if ("${instanceName}" == 'qtsict*') {
+			INSTANCE_GROUP="ICT"
+			DYNATRACE_PORT="9996"
+		} else {
+			INSTANCE_GROUP="BAT"
+			DYNATRACE_PORT="9997"
+		}
+	} else {
+		DYNATRACE_PORT="9999"
+		DYNATRACE_HOST="localhost"
+		INSTANCE_GROUP="${instanceName}"
+	}
+
+	DYNATRACE_ID="IBOMDM_${INSTANCE_GROUP}"
+	echo "DYNATRACE_ID is ${DYNATRACE_ID}"
+} 
+*/
+
+def configUpdate(instanceName) {
+	echo "imageTagVersion is ${imageTagVersion}"
+	echo "instanceName is ${instanceName}"
+
+	//if ((envInput != 'PROD') && ("${instanceInput}".contains("fdt") || "${instanceInput}".contains("ict"))) {
+	//	mdmENVid="${envInput}${instanceInput}"
+	//	echo "mdmENVid ${mdmENVid}"
+	//	sh 'cat ./setenv.sh | sed -e "s|__DYNATRACE_HOME__|$DYNATRACE_HOME|g" -e "s/__DYNATRACE_PORT__/$DYNATRACE_PORT/g" -e "s/__DYNATRACE_HOST__/$DYNATRACE_HOST/g" -e "s/__DYNATRACE_ID__/$DYNATRACE_ID/g" > ./setenv.sh_"${envInput}_${instanceInput}"'
+	//	sh 'cat ./start_ibo_mdm.sh | sed -e "s|__INSTANCE_ID__|$instanceInput|g" > ./start_ibo_mdm.sh_"${envInput}_${instanceInput}"'
+	//	sh 'cat ./datasource.properties | sed -e "s/__MDM_ENV_ID__/$mdmENVid/g" > ./datasource.properties_"${envInput}_${instanceInput}"'
+	//} else {
+
+	mdmENVid="${envInput_lowerCase}${instanceName}"
+
+	if (envInput != "PROD") {
+		echo "mdmENVid for ${envInput} is ${mdmENVid}"
+
+		sh "cat ./datasource.properties | sed -e 's/__MDM_ENV_ID__/${mdmENVid}/g' > ./datasource.properties_${envInput_lowerCase}_${instanceName}"
+	} else {
+		mdmENVid_upperCase = mdmENVid.toUpperCase()
+		echo "mdmENVid for ${envInput} is ${mdmENVid_upperCase}"
+
+		sh "cat ./datasource.properties | sed -e 's/__MDM_ENV_ID__/${mdmENVid_upperCase}/g' > ./datasource.properties_${envInput_lowerCase}_${instanceName}"
+	}
+
+	// [MOOD-1399]  remove dynatrace appmon configuration from IBO APP & IBO MDM
+	// sh "cat ./setenv.sh | sed -e 's|'__DYNATRACE_HOME__'|'${DYNATRACE_HOME}'|g' -e 's/__DYNATRACE_PORT__/${DYNATRACE_PORT}/g' -e 's/__DYNATRACE_HOST__/${DYNATRACE_HOST}/g' -e 's/__DYNATRACE_ID__/${DYNATRACE_ID}/g' > ./setenv.sh_${envInput_lowerCase}_${instanceName}" 
+	sh "cat ./setenv.sh > ./setenv.sh_${envInput_lowerCase}_${instanceName}" 
+	sh "cat ./start_ibo_mdm.sh | sed -e 's/__INSTANCE_ID__/${instanceName}/g' > ./start_ibo_mdm.sh_${envInput_lowerCase}_${instanceName}"
+
+	//}
+	echo "config update done..."
+	sh "ls -ltr"
+}
+
+def buildAndPushImage(instanceName) {
+
+	// build docker image
+	// TODO Putting this temporarily on hold as the Docker Registry does not allow to overwrite the image with same name & tag.
+	// TODO SCM team work on Docker image Snapshot & Release build. Once that is available we can treat branch version as imageTag version.
+	// imageTagVersion = branchVersion  
+	
+	// TODO temporary logic/option to prompt user on Image Tag Version input.
+	// TODO remove this prompt option once the SCM is ready with Docker image Snapshot & Release build process.
+	imageTagVersion = input(id: 'userInput', message: 'Enter image Tag Version number:?', 
+		parameters: [
+			string(
+				defaultValue: '1.64.0',
+				description: 'Branch',
+				name: 'imageTagVersion'
+			)
+		])
+	// TODO END
+	
+	echo "imageTagVersion is ${imageTagVersion}"
+	echo "envInput_lowerCase is ${envInput_lowerCase}"
+	echo "instanceName is ${instanceName}"
+
+	sh "docker build --build-arg ENV_ID=${envInput_lowerCase} --build-arg DEPLOYMENT_ID=${instanceName} -t docker.maven.incomm.com/ibomdm:${imageTagVersion}.${envInput_lowerCase}.${instanceName} -f Dockerfile --no-cache ."
+	sh "docker images"
+	// push image to repo
+	sh "docker push docker.maven.incomm.com/ibomdm:${imageTagVersion}.${envInput_lowerCase}.${instanceName}"
+	echo "image has been pushed..."
+	// remove installed image to reclaim space.
+	sh "docker rmi docker.maven.incomm.com/ibomdm:${imageTagVersion}.${envInput_lowerCase}.${instanceName}"
+	echo "image has been removed..."
+	sh "docker images"
+}
+
+def deploymentStage() {
+
+	stage ("Preparing for Deployment") {
+
+		chooseEnvLevelAndEnvName() // choose env level and env name
+
+		// user input to enter release number which will be used for image tag as well
+		if(imageTagVersion == "" || imageTagVersion == "null") {
+			imageTagVersion = input(id: 'userInput', message: 'Enter Release Number:?', 
+				parameters: [
+					string(
+						defaultValue: '1.64.0',
+						description: 'Release Number',
+						name: 'release_number'
+					)
+				])
+		}
+
+		if (envInput != "PROD") {
+			if("null" == instanceInput || "" == instanceInput) {
+				timeout(time: 30, unit: 'SECONDS') {
+					instanceInput = input message: 'User input required', ok: 'Continue',
+			 			parameters: [choice(name: 'Select Application Instance', choices: 'fdt01\nfdt02\nict01\nict02\nfdt_all\nict_all', description: 'Deploying to ?')]
+				}
+			}
+			dockerDeploy_lowerEnv()
+		} else {
+			target_env = envInput
+				getApproval(approvalData)
+				dockerDeploy_ProdEnv()
+			dockerDeploy_ProdEnv()
+		}
+	}
+
+	currentBuild.result = 'SUCCESS'
+}
+
+def dockerDeploy_lowerEnv() {
+	
+	echo "Deploying to ${envInput} environment..."
+
+	if (envInput == 'DEV') {
+
+		stage ('Deploying to DEV') {
+
+			dir(dockerDeployScriptDir) {
+
+				if ("${instanceInput}" == "fdt_all") {
+					for (i = 0; i < dev_all_host_fdt.size(); i++) {
+
+						hostName = "${dev_all_host_fdt[i]}"
+						instanceInput="${instanceInput_fdt_all_lle[i]}"
+						echo "Installing on ${hostName} ..."
+
+						deployToHost(hostName)
+					}
+				} else if ("${instanceInput}" == "ict_all") {
+					for (i = 0; i < dev_all_host_ict.size(); i++) {
+
+						hostName = "${dev_all_host_ict[i]}"
+						instanceInput="${instanceInput_ict_all_lle[i]}"
+						echo "Installing on ${hostName} ..."
+
+						deployToHost(hostName)
+					}
+				} else if ("${instanceInput}".contains("fdt") || "${instanceInput}".contains("ict")) {
+
+					def hostName = "dev_host_${instanceInput}"
+					echo "hostName value is ${hostName}"
+					echo "Installing on ${hostMap[hostName]} ..."
+
+					deployToHost("${hostMap[hostName]}")
+				}
+			}
+		}
+	} else if (envInput == 'QA') {
+
+		stage ('Deploying to QA') {
+
+			dir(dockerDeployScriptDir) {
+
+				if ("${instanceInput}" == "fdt_all") {
+					for (i = 0; i < qa_all_host_fdt.size(); i++) {
+
+						hostName = "${qa_all_host_fdt[i]}"
+						instanceInput="${instanceInput_fdt_all_lle[i]}"
+						echo "Installing on ${hostName} ..."
+
+						deployToHost(hostName)
+					}
+				} else if ("${instanceInput}" == "ict_all") {
+					for (i = 0; i < qa_all_host_ict.size(); i++) {
+
+						hostName = "${qa_all_host_ict[i]}"
+						instanceInput="${instanceInput_ict_all_lle[i]}"
+						echo "Installing on ${hostName} ..."
+
+						deployToHost(hostName)
+					}
+				} else if ("${instanceInput}".contains("fdt") || "${instanceInput}".contains("ict")) {
+				
+					def hostName = "qa_host_${instanceInput}"
+					echo "hostName is ${hostMap[hostName]}"
+					echo "Installing on ${hostMap[hostName]} ..."
+					
+					deployToHost("${hostMap[hostName]}")
+				}
+			}
+		}
+	} else if (envInput == 'UAT') {
+
+		stage ('Deploying to UAT') {
+
+			dir(dockerDeployScriptDir) {
+
+				if ("${instanceInput}" == "fdt_all") {
+					for (i = 0; i < uat_all_host_fdt.size(); i++) {
+
+						hostName = "${uat_all_host_fdt[i]}"
+						instanceInput="${instanceInput_fdt_all_lle[i]}"
+						echo "Installing on ${hostName} ..."
+
+						deployToHost(hostName)
+					}
+				} else if ("${instanceInput}" == "ict_all") {
+					for (i = 0; i < uat_all_host_ict.size(); i++) {
+
+						hostName = "${uat_all_host_ict[i]}"
+						instanceInput="${instanceInput_ict_all_lle[i]}"
+						echo "Installing on ${hostName} ..."
+
+						deployToHost(hostName)
+					}
+				} else if ("${instanceInput}".contains("fdt") || "${instanceInput}".contains("ict")) {
+
+					def hostName = "uat_host_${instanceInput}"
+					echo "hostName is ${hostMap[hostName]}"
+					echo "Installing on ${hostMap[hostName]} ..."
+					
+					deployToHost("${hostMap[hostName]}")
+				}
+			}
+		}
+	} else {
+		echo "No env value provided ${envInput}"
+	}
+}
+
+def dockerDeploy_ProdEnv() {
+	stage ('Deploying to PROD') {
+
+		dir(dockerDeployScriptDir) {
+			for (i = 0; i < prod_host_all.size(); i++) {
+				hostName = "${prod_host_all[i]}"
+				instanceInput="${instance_Prod[i]}"
+				echo "Installing on ${hostName} ..."
+				deployToHost(hostName)
+			}
+		}
+	}
+}
+
+def constructDockerBuildSVNPath() {
+	if(userInputDockerScriptSource == 'branches') {
+		dockerBranchVersion = input(id: 'userInputForDocker', message: 'Enter Branch version number:?', 
+			parameters: [
+				string(
+					defaultValue: '8.0.0',
+					description: 'Branch',
+					name: 'Docker_Branch_version_number'
+				)
+			])
+
+		finalSVNPath_Docker = developmentBranch_Docker + dockerBranchVersion + "/docker-ibo-mdm-pipeline/build-docker-image/"
+	} else { 
+		finalSVNPath_Docker = releaseTrunk_Docker + "/build-docker-image/"
+	}
+}
+
+def constructDockerDeploySVNPath() {
+
+	echo "constructing Docker Deploy SVN Path..."
+
+	if(userInputDockerScriptSource == 'branches') {
+		dockerBranchVersion = input(id: 'userInputForDocker', message: 'Enter Branch version number:?', 
+			parameters: [
+				string(
+					defaultValue: '8.0.0',
+					description: 'Branch',
+					name: 'Docker_Branch_version_number'
+				)
+			])
+
+		finalSVNPath_Docker = developmentBranch_Docker + dockerBranchVersion + "/docker-ibo-mdm-pipeline/deploy-docker-image/"
+	} else { 
+		finalSVNPath_Docker = releaseTrunk_Docker + "/deploy-docker-image/"
+	}
+
+	echo "finalSVNPath_Docker is $finalSVNPath_Docker"
+}
+
+def deployToHost(hostname_param) {
+	echo "Deploy To Host function"
+	echo "hostname_param is ${hostname_param}"
+	echo "imageTagVersion is ${imageTagVersion}"
+	echo "instanceInput is ${instanceInput}"
+	echo "envInput_lowerCase is  ${envInput_lowerCase}"
+	echo "files under dir"
+
+	sh "ls -ltr"
+
+	// stop the container
+	sh "ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${hostname_param} 'docker stop ibo_mdm' || true"
+	sh "ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${hostname_param} 'docker rm -f \$(docker ps -a -q)' || true"
+	sh "ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${hostname_param} 'docker rmi \$(docker images -q)' || true"
+	sh "ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${hostname_param} 'docker rmi \$(docker images -qf dangling=true)' || true"
+	sh "ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${hostname_param} 'docker pull docker.maven.incomm.com/ibomdm:${imageTagVersion}.${envInput_lowerCase}.${instanceInput}'"
+	sh "ssh -i ~/.ssh/pipeline -q -o StrictHostKeyChecking=no root@${hostname_param} 'docker run --name ibo_mdm --mount type=bind,source=/var/opt/app_logs/ibo_mdm,destination=/opt/masterdata/management/ibo_${instanceInput}/apache-tomcat-8.0.47/logs --net=host -d docker.maven.incomm.com/ibomdm:${imageTagVersion}.${envInput_lowerCase}.${instanceInput}'"
+}

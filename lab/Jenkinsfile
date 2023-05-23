@@ -1,0 +1,221 @@
+import hudson.model.*
+import hudson.console.HyperlinkNote
+import hudson.AbortException
+import groovy.xml.MarkupBuilder
+import groovy.xml.*
+import groovy.util.*
+import groovy.json.*
+
+
+@Library('pipeline-shared-library') _
+//  Modify for your BRANCHING
+//  you should have a development branch, a branch to merge and build when going to QA
+//  and then a release branch where the release is built typically master or trunk
+gitRepository = "https://github.com/InComm-Software-Development/hello-world.git"
+gitBranch = "${Branch}"
+gitCreds = "scm-incomm"
+credsName = "scm_deployment"
+// inputs from build with parameters
+userInput = "${BUILD_TYPE}"
+target_env = "${target_env}"
+testName = "myTest"
+//globals
+relVersion = "null"
+userApprove = "null"
+user = "tcserver"
+group = "pivotal"
+repoId = 'maven-release'
+//userInput = InputAction()
+
+node('linux'){
+
+
+currentBuild.result = 'SUCCESS'
+maven = "/opt/apache-maven-3.2.1/bin/mvn"
+jdk=tool name:'openjdk-11.0.7.10-0'
+env.JAVA_HOME="${jdk}"
+echo "jdk installation path is: ${jdk}"
+sh "${jdk}/bin/java -version"
+
+sh "whoami"
+
+	try {
+		// check out the code no matter what. when promoting a release check out the release tag or branch so the
+		// proper configurations can be deployed
+		stage('checkout'){
+			cleanWs()
+			githubCheckout(gitCreds, gitRepository, gitBranch)
+		}
+		
+load 'buildscript/projectvars'
+
+echo "Build_Type = ${userInput}"
+
+
+		stage('Build'){
+
+			echo "Loaded vars"
+			echo ""
+			echo "${artifactDeploymentLoc}"
+			echo "${serviceName}"
+			echo "${userInput}"
+			echo "${groupId}"
+			echo "${artifactId}"
+			echo ""
+			echo "done loaded"
+
+
+			if (userInput == 'Build') {
+				//sonar  pipelineSonar  sonarqube.incomm.com
+				withSonarQubeEnv('sonarqube.incomm.com'){
+					//sh "${maven} compile install sonar:sonar" //-Dsonar.branch.name=${gitBranch}
+				}
+				sleep(3)
+				//sh "${maven} deploy"
+				//sh "cp ${artifactId}/target/${artifactId}.${artExtension} ."
+				
+			} else if (userInput == 'Release') {
+
+				//echo "Maven Release:Prepare..."
+
+				//sh "${maven} -B org.apache.maven.plugins:maven-release-plugin:2.5.3:prepare -Darguments='-Dmaven.javadoc.skip=true'"
+				sleep(3)
+				//sh "${maven} -B org.apache.maven.plugins:maven-release-plugin:2.5.3:perform -Darguments='-Dmaven.javadoc.skip=true'"
+
+
+			} else if (userInput == 'Test') {
+
+				echo "Running only tests"
+				
+			} else {
+				echo "no build"
+			}
+
+		} //stage
+
+
+stage('SonarQube Quality Gate Check') {
+		if (userInput == 'Build'){
+	
+		//	sleep(40) // this sleep needs to be here to delay checking for OK immediately or else it fails QG
+			//sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${sonarProjectName} -Dsonar.sources=src/"
+			
+		//	timeout(time: 4, unit: 'MINUTES') {	
+		//		def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
+		//			if (qg.status != 'OK') {
+		//			error "Pipeline aborted due to quality gate failure: ${qg.status}"
+		//			}
+		//	echo "after QG timeout"
+		//	}
+		//		
+		} else {
+				echo "Quality Gate not needed for Release or Promote"
+		}
+}//end QualityGate
+
+
+		//select the artifact 
+		stage('Get Artifact'){
+
+			if (userInput == 'Promote'){
+				
+				artifactResolver artifacts: [artifact(artifactId: artifactId, extension: artExtension, groupId: groupId, targetFileName: artifactName, version: artifactVersion)], enableRepoLogging: false, releaseUpdatePolicy: 'always', snapshotUpdatePolicy: 'always'
+
+				echo "${artifactName}"
+				sh "ls -ltr"
+			
+			} else {
+				echo "not getting artifact during a release build"
+			}
+		}
+
+		stage('Deployment'){
+			echo "This is where we do a bunch of stuff"
+
+			if ((userInput == 'Build') || (userInput == 'Promote')) {
+				if (userInput == 'Build') {
+					target_env = 'dev'
+					echo "Build always deploys to dev env"
+				}
+
+				deployComponents(target_env, targets[target_env], "${artifactName}")
+
+			} else {
+				echo "not deploying during a release build"
+			}
+
+		}
+
+		stage('Testing'){
+			echo "no tests at this time"
+		}
+
+
+	} catch (exc) {
+
+			currentBuild.result = 'FAILURE'
+			//sendEmail(emailDistribution, gitBranch, userInput, target_env, userApprove)
+			echo 'ERROR:  ' + exc.toString()
+			throw exc
+
+	} finally {
+
+		stage('Notification'){
+			
+			sendEmail(emailDistribution, gitBranch, userInput, target_env, userApprove)	
+		}
+	}
+
+} //end of node
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////  Methods and functions and calls Oh My  ///////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+def deployComponents(envName, targets, Artifact){
+
+	echo "my env= ${envName}"
+	def stepsInParallel = targets.collectEntries {
+		["$it" : { deploy(it, artifactDeploymentLoc, Artifact) }]
+	}
+	parallel stepsInParallel
+
+}
+
+
+def deploy(target_hostname, artifactDeploymentLoc, Artifact) {
+
+	echo " the target is: ${target_hostname}"
+
+	sshagent([credsName]) {
+		sh """
+			echo " the target node is:  ${target_hostname}"
+		"""
+	}
+
+}
+
+
+
+def tests(target, envName, testName){
+
+	echo " Smoke Testing on ${target}"
+	echo "my test = ${testName}"
+	sleep(1)
+	dir('testresults'){
+		//println "Run Test Script"
+		//http://localhost:1505/lisa-invoke/runTest?testCasePath=Projects\\AppleIT\\Tests\\AppleDevTest.tst -OutFile testResults.xml -Verbose
+		// String results = readFile 'testresults.xml'
+	}
+	//if(1 ){
+	//	println "ERROR todo "
+	//} else {
+	//	println "results"
+	//}
+}
+
+
+///// The End

@@ -1,0 +1,12 @@
+groupId: com.incomm
+artifactId: B2B
+artifactExtension: jar
+
+deployment:
+  common: true #update true or false based on if a common folder exists
+  commonLocation: src/main/resources/common/ #if above is false doesn't matter what value is in
+  artifactPropertyFolderName: incomm-b2b
+  serviceName: standalone-b2b.service
+  defaultEnvironment: dev-B2B-CCA #Default key to deploy to set of servers from target array
+
+emailDistribution: "ppiermarini@incomm.com rkale@incomm.com dkumar@incomm.com schennamsetty@incomm.com vhari@incomm.com" #Update ad-hoc

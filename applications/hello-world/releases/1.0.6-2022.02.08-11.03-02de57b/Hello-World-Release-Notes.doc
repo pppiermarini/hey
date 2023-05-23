@@ -1,0 +1,1677 @@
+Date: Wed, 26 Jan 2022 23:50:53 +0000 (UTC)
+Message-ID: <1480444974.21.1643241053428@58173ec0ea24>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_20_1748721251.1643241053428"
+
+------=_Part_20_1748721251.1643241053428
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Release Notes Sprint 17-20</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Release Notes Sprint 17-20</h1>
+    <div class=3D"Section1">
+        <h3 id=3D"ReleaseNotesSprint17-20-Sprint20Versions:"><strong><span =
+style=3D"color: rgb(76,154,255);">Sprint 20 Versions: </span></strong><br><=
+/h3>
+<p><strong><span style=3D"color: rgb(76,154,255);">UI-1.15.7-2022.01.24-06.=
+27-34bb1d5</span></strong></p>
+<p><strong><span style=3D"color: rgb(76,154,255);">BE-1.15.11-2022.01.25-07=
+.32-2ea27f2</span></strong></p>
+<p><strong><span style=3D"color: rgb(76,154,255);">Identity-1.14.2-2021.12.=
+13-11.40-f0fc2cc</span></strong></p>
+<p><strong><span style=3D"color: rgb(76,154,255);">FN-1.15.0-2022.01.25-05.=
+06-a0c64b7</span></strong></p>
+<h3 id=3D"ReleaseNotesSprint17-20-Sprint17-19Versions"><strong><span style=
+=3D"color: rgb(151,160,175);">Sprint 17-19 Versions</span></strong></h3>
+<p><strong><span style=3D"color: rgb(151,160,175);">UI-1.14.15-2022.01.05-1=
+1.03-f49ddc1</span></strong></p>
+<p><strong><span style=3D"color: rgb(151,160,175);">BE-1.14.24-2022.01.05-1=
+0.54-b245d81</span></strong></p>
+<p><strong><span style=3D"color: rgb(151,160,175);">Identity-1.14.2-2021.12=
+.13-11.40-f0fc2cc</span></strong></p>
+<p><strong><span style=3D"color: rgb(151,160,175);">FN-1.14.3-2022.01.04-11=
+.36-5f33d3d</span></strong></p>
+<p></p>
+<p><strong>Sprint 17 Goals:</strong></p>
+<ol>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6823" rel=3D"nofollow">CR - Add Two fields to Task Mana=
+gement Page</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6799" rel=3D"nofollow">Add User Guide for Internal User=
+s</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6353" rel=3D"nofollow">Manage Order Icon business days =
+in system settings</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6151" rel=3D"nofollow">Store warehouse of origin as par=
+t of data processing in Sell-IT</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6744" rel=3D"nofollow">Messages: Get Message Statistics=
+ for each message sent by user</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6144" rel=3D"nofollow">MAM Admin: apply permissions to =
+manage settings on Merchant level</a></p></li>
+<li><p>Investigation:</p>
+<ol>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-5963" rel=3D"nofollow">Manage Merchants within Sell-IT<=
+/a></p></li>
+</ol></li>
+</ol>
+<p><strong>Sprint 18 Goals:</strong></p>
+<ol>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6145" rel=3D"nofollow">[Enhancement]Admin Settings: app=
+ly success confirmation message</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-5568" rel=3D"nofollow">[View Activities] Allow user to =
+search 6 months using advance search</a></p></li>
+<li><p>Tech enchancements:</p>
+<ol>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7040" rel=3D"nofollow">Sales Import Job Optimization</a=
+></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7039" rel=3D"nofollow">Shipment Import Job Optimization=
+</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7038" rel=3D"nofollow">Order Import Job Optimization</a=
+>y</p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7037" rel=3D"nofollow">Inventory Import Job Optimizatio=
+n</a></p></li>
+</ol></li>
+</ol>
+<p><strong>Sprint 19 Goals:</strong></p>
+<p>Complete Tech enhancements and introduce Alerts:</p>
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7121" rel=3D"nofollow">Prevent Sales Import Job being r=
+un concurrently</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7123" rel=3D"nofollow">Investigate date parsing issues<=
+/a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7045" rel=3D"nofollow">[DEV_OPS] Implement support of J=
+MS retries</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6902" rel=3D"nofollow">[DEV_OPS] Introduce alerting fun=
+ctionality</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6143" rel=3D"nofollow">[Alerts] Notify Logistic Team if=
+ SLA on file receiving is missed</a></p></li>
+</ul>
+<p><strong>Sprint 20 Goals:</strong></p>
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6191" rel=3D"nofollow">Update Planogram Page to include=
+ Products Data</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7214" rel=3D"nofollow">Batch file download lock</a></p>=
+</li>
+<li><p>Discrepancy file: <a class=3D"external-link" href=3D"https://incomm-=
+payments.atlassian.net/browse/FRNTOFF-7215" rel=3D"nofollow">Case-ignorant =
+pack name check during file import jobs</a></p></li>
+<li><p>Tech enhancement: <a class=3D"external-link" href=3D"https://incomm-=
+payments.atlassian.net/browse/FRNTOFF-7210" rel=3D"nofollow">Introduce down=
+loading files using streams</a></p></li>
+<li><p>Defect fixes</p></li>
+</ul>
+<h1 style=3D"margin-left: 180.0px;" id=3D"ReleaseNotesSprint17-20-UserStori=
+es:SystemJIRAproject=3DFRNTOFFANDissuetypein(Story)ANDSprintin(6982,7042,70=
+89,7144)true56f06052-3082-3cfe-a488-051c3f42884c"><br>User Stories: <span c=
+lass=3D"static-jira-issues_count confluence-jim-macro"> <a class=3D"issue-l=
+ink" href=3D"https://incomm-payments.atlassian.net/secure/IssueNavigator.js=
+pa?reset=3Dtrue&amp;jqlQuery=3Dproject+%3D+FRNTOFF+AND+issuetype+in+%28Stor=
+y%29+AND+Sprint+in+%28+6982%2C+7042%2C+7089%2C+7144%29+++++&amp;src=3Dconfm=
+acro"> 25 issues </a> </span> </h1>=20
+<div id=3D"refresh-module-1878285274" class=3D"confluence-jim-macro refresh=
+-module-id jira-table">=20
+<p> </p>
+<div id=3D"jira-issues-1878285274" style=3D"width: 100%;  overflow: auto;" =
+class=3D"jira-issues">=20
+<table class=3D"aui">=20
+<tbody>=20
+<tr></tr>=20
+<tr>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Key</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Summary</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">T</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Assignee</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">P</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Status</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Resolution</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">sprint</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Labels</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Fix Version/s</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">epic link</span></th>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7215?src=3Dconfmac=
+ro">FRNTOFF-7215</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7215?src=3Dconfmacro"> Case-ignora=
+nt pack name check during file import jobs </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7215?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.15.1 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-4239 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7214?src=3Dconfmac=
+ro">FRNTOFF-7214</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7214?src=3Dconfmacro"> Batch file =
+download lock </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7214?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Anthony Rozdobudko </td=
+>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/major.sv=
+g" alt=3D"2 (Medium)" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-UI-1.15.0, SELLI=
+T-BE-1.15.4, SELLIT-UI-1.15.5 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7210?src=3Dconfmac=
+ro">FRNTOFF-7210</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7210?src=3Dconfmacro"> Introduce d=
+ownloading files using streams </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7210?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Darius Navickas </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Dev Complete </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.15.3, SELLI=
+T-BE-1.15.7 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-4239 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7123?src=3Dconfmac=
+ro">FRNTOFF-7123</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7123?src=3Dconfmacro"> Investigate=
+ date parsing issues </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7123?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Daniil Yurov </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Done </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+9 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-7036 </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7121?src=3Dconfmac=
+ro">FRNTOFF-7121</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7121?src=3Dconfmacro"> Prevent Sal=
+es Import Job being run concurrently </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7121?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Daniil Yurov </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+9 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.20 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-7036 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7045?src=3Dconfmac=
+ro">FRNTOFF-7045</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7045?src=3Dconfmacro"> [DEV_OPS] I=
+mplement support of JMS retries </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7045?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Valiantsin Trusevich </=
+td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+9 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.22 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-4239 </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7040?src=3Dconfmac=
+ro">FRNTOFF-7040</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7040?src=3Dconfmacro"> Sales Impor=
+t Job Optimization </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7040?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Daniil Yurov </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+8 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.13 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-7036 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7039?src=3Dconfmac=
+ro">FRNTOFF-7039</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7039?src=3Dconfmacro"> Shipment Im=
+port Job Optimization </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7039?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+8 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.7 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-7036 </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7038?src=3Dconfmac=
+ro">FRNTOFF-7038</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7038?src=3Dconfmacro"> Order Impor=
+t Job Optimization </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7038?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+8 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.6 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-7036 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7037?src=3Dconfmac=
+ro">FRNTOFF-7037</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7037?src=3Dconfmacro"> Inventory I=
+mport Job Optimization </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7037?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Valiantsin Trusevich </=
+td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+8 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.5, SELLI=
+T-BE-1.14.7, SELLIT-UI-1.14.10 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-7036 </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7013?src=3Dconfmac=
+ro">FRNTOFF-7013</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7013?src=3Dconfmacro"> [PROD PATCH=
+] Disable history creation during file processing </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7013?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Daniil Yurov </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/critical=
+.svg" alt=3D"Critical" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+8 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnUAT </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.13.16 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6950?src=3Dconfmac=
+ro">FRNTOFF-6950</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6950?src=3Dconfmacro"> POC: Introd=
+uce downloading files using streams </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6950?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Darius Navickas </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Done </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+9 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-4239 </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6949?src=3Dconfmac=
+ro">FRNTOFF-6949</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6949?src=3Dconfmacro"> Clean up le=
+gacy resources - </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6949?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Valiantsin Trusevich </=
+td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Duplicate </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+8 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-4239 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6902?src=3Dconfmac=
+ro">FRNTOFF-6902</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6902?src=3Dconfmacro"> [DEV_OPS] I=
+ntroduce alerting functionality </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6902?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Ihar Ratner </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+9 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Groomed, VerifiedOnQA <=
+/td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.22 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-4239 </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6823?src=3Dconfmac=
+ro">FRNTOFF-6823</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6823?src=3Dconfmacro"> CR - Add Tw=
+o fields to Task Management Page </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6823?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Anthony Rozdobudko </td=
+>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+7 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> UAT_15_SELLIT, Verified=
+OnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-UI-1.14.0 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-4303 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6799?src=3Dconfmac=
+ro">FRNTOFF-6799</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6799?src=3Dconfmacro"> Add User Gu=
+ide for Internal Users </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6799?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Siarhei Ladutska </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+7 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-UI-1.14.0 </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6744?src=3Dconfmac=
+ro">FRNTOFF-6744</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6744?src=3Dconfmacro"> Messages: G=
+et Message Statistics for each message sent by user </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6744?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+7 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.0, SELLI=
+T-Identity-1.14.0, SELLIT-UI-1.14.1 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-3524 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6353?src=3Dconfmac=
+ro">FRNTOFF-6353</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6353?src=3Dconfmacro"> Manage Orde=
+r Icon business days in system settings </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6353?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Darius Navickas </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+7 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-UI-1.14.0, SELLI=
+T-BE-1.14.0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6191?src=3Dconfmac=
+ro">FRNTOFF-6191</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6191?src=3Dconfmacro"> Update Plan=
+ogram Page to include Products Data </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6191?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> MVP2, SELLIT-UI-1.15.3,=
+ SELLIT-BE-1.15.3 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-3526 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6151?src=3Dconfmac=
+ro">FRNTOFF-6151</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-6151?src=3Dconfmacro"> Store wareh=
+ouse of origin as part of data processing in Sell-IT </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-6151?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14615?size=3Dmedium" alt=3D"Story" class=
+=3D"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Darius Navickas </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+7 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> SELLIT-BE-1.14.0, SELLI=
+T-BE-1.14.4 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> FRNTOFF-3496 </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div>=20
+<div class=3D"refresh-issues-bottom"> <span id=3D"total-issues-count" class=
+=3D"total-issues-count"> <span>Showing 20 out of</span> <a rel=3D"nofollow"=
+ title=3D"View all matching issues in JIRA." href=3D"https://incomm-payment=
+s.atlassian.net/secure/IssueNavigator.jspa?reset=3Dtrue&amp;jqlQuery=3Dproj=
+ect+%3D+FRNTOFF+AND+issuetype+in+%28Story%29+AND+Sprint+in+%28+6982%2C+7042=
+%2C+7089%2C+7144%29+++++&amp;src=3Dconfmacro"> 25 issues </a> </span>=20
+</div>=20
+<p></p>=20
+</div>=20
+<h1 style=3D"margin-left: 180.0px;" id=3D"ReleaseNotesSprint17-20-Defectsfi=
+xed:SystemJIRAproject=3DFRNTOFFANDcomponent=3D&quot;sellIT&quot;ANDfixVersi=
+onin(SELLIT-UI-1.14.0,SELLIT-UI-1.14.1,SELLIT-UI-1.14.2,SELLIT-UI-1.14.3,SE=
+LLIT-UI-1.14.4,SELLIT-UI-1.14.5,SELLIT-UI-1.14.6,SELLIT-UI-1.14.7,SELLIT-UI=
+-1.14.8,SEL"><br>Defects fixed: <span class=3D"static-jira-issues_count con=
+fluence-jim-macro"> <a class=3D"issue-link" href=3D"https://incomm-payments=
+.atlassian.net/secure/IssueNavigator.jspa?reset=3Dtrue&amp;jqlQuery=3Dproje=
+ct+%3D+FRNTOFF+AND+component+%3D+%22sell+IT%22+AND+fixVersion+in+%28SELLIT-=
+UI-1.14.0%2C+SELLIT-UI-1.14.1%2C+SELLIT-UI-1.14.2%2C+SELLIT-UI-1.14.3%2C+SE=
+LLIT-UI-1.14.4%2C+SELLIT-UI-1.14.5%2C+SELLIT-UI-1.14.6%2C+SELLIT-UI-1.14.7%=
+2C+SELLIT-UI-1.14.8%2C+SELLIT-UI-1.14.9%2C+SELLIT-UI-1.14.10%2C+SELLIT-UI-1=
+.14.11%2C+SELLIT-UI-1.14.12%2C+SELLIT-UI-1.14.13%2C+SELLIT-UI-1.14.14%2C+SE=
+LLIT-UI-1.14.15%2C+SELLIT-UI-1.15.0%2C+SELLIT-UI-1.15.1%2C+SELLIT-UI-1.15.2=
+%2C+SELLIT-UI-1.15.3%2C+SELLIT-UI-1.15.4%2C+SELLIT-UI-1.15.5%2C+SELLIT-UI-1=
+.15.6%2C+SELLIT-UI-1.15.7%2C+SELLIT-BE-1.14.0%2C+SELLIT-BE-1.14.1%2C+SELLIT=
+-BE-1.14.2%2C+SELLIT-BE-1.14.3%2C+SELLIT-BE-1.14.4%2C+SELLIT-BE-1.14.5%2C+S=
+ELLIT-BE-1.14.6%2C+SELLIT-BE-1.14.7%2C+SELLIT-BE-1.14.8%2C+SELLIT-BE-1.14.9=
+%2C+SELLIT-BE-1.14.11%2C+SELLIT-BE-1.14.12%2C+SELLIT-BE-1.14.15%2C+SELLIT-B=
+E-1.14.16%2C+SELLIT-BE-1.14.17%2C+SELLIT-BE-1.14.19%2C+SELLIT-BE-1.14.20%2C=
++SELLIT-BE-1.14.21%2C+SELLIT-BE-1.14.22%2C+SELLIT-BE-1.14.24%2C+SELLIT-BE-1=
+.15.0%2C+SELLIT-BE-1.15.1%2C+SELLIT-BE-1.15.2%2C+SELLIT-BE-1.15.3%2C+SELLIT=
+-BE-1.15.4%2C+SELLIT-BE-1.15.5%2C+SELLIT-BE-1.15.6%2C+SELLIT-BE-1.15.7%2C+S=
+ELLIT-BE-1.15.9%2C+SELLIT-BE-1.15.10%2C+SELLIT-BE-1.15.11%2C+SELLIT-Identit=
+y-1.14.0%2C+SELLIT-FN-1.14.2%2C+SELLIT-FN-1.14.3%29+AND+issuetype+in+%28Bug=
+%29+ORDER+BY+issuetype+DESC++&amp;src=3Dconfmacro"> 52 issues </a> </span> =
+</h1>=20
+<div id=3D"refresh-module-623981818" class=3D"confluence-jim-macro refresh-=
+module-id jira-table">=20
+<p> </p>
+<div id=3D"jira-issues-623981818" style=3D"width: 100%;  overflow: auto;" c=
+lass=3D"jira-issues">=20
+<table class=3D"aui">=20
+<tbody>=20
+<tr></tr>=20
+<tr>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Key</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Summary</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">T</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Assignee</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Reporter</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">P</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Status</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Resolution</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">severity</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">sprint</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Labels</span></th>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7361?src=3Dconfmac=
+ro">FRNTOFF-7361</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7361?src=3Dconfmacro"> Sent Messag=
+es: other Download icons look active during file downloading </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7361?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Anthony Rozdobudko </td=
+>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Trivial </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7358?src=3Dconfmac=
+ro">FRNTOFF-7358</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7358?src=3Dconfmacro"> [QA, UAT]Bi=
+g Task Download failed for Task created for all Divisions </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7358?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Darius Navickas </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+1 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnUAT </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7333?src=3Dconfmac=
+ro">FRNTOFF-7333</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7333?src=3Dconfmacro"> Planogram: =
+if only Product UPC is valid - it is excluded from the Products list </a> <=
+/td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7333?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7332?src=3Dconfmac=
+ro">FRNTOFF-7332</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7332?src=3Dconfmacro"> Planogram: =
+if sort by Planogram Name the expanded set of Products is not refreshed bas=
+ed on Planogram order </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7332?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Siarhei Ladutska </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Minor </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7327?src=3Dconfmac=
+ro">FRNTOFF-7327</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7327?src=3Dconfmacro"> Planogram: =
+Product Name 'Do Not Use (DNU)' is displayed </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7327?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7326?src=3Dconfmac=
+ro">FRNTOFF-7326</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7326?src=3Dconfmacro"> Planogram: =
+displayed Product Name is not match with MDM </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7326?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7323?src=3Dconfmac=
+ro">FRNTOFF-7323</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7323?src=3Dconfmacro"> Planogram: =
+if expand several Planograms sequentially - the header without products dis=
+played </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7323?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Siarhei Ladutska </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7321?src=3Dconfmac=
+ro">FRNTOFF-7321</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7321?src=3Dconfmacro"> Sent Messag=
+es: if scroll down in the middle or bottom of Sent messages and download - =
+screen is not locked </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7321?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Anthony Rozdobudko </td=
+>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Dev Complete </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Minor </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7305?src=3Dconfmac=
+ro">FRNTOFF-7305</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7305?src=3Dconfmacro"> Downloading=
+ file&gt;Batch Processing: 500 error appears if click on download file by d=
+ifferent users </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7305?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Darius Navickas </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7292?src=3Dconfmac=
+ro">FRNTOFF-7292</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7292?src=3Dconfmacro"> Order Histo=
+ry: Order with submission date=3Dtomorrow is shown </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7292?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Siarhei Ladutska </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Minor </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7261?src=3Dconfmac=
+ro">FRNTOFF-7261</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7261?src=3Dconfmacro"> Task creati=
+on: Submit button becomes available if big Task for All Albertsons Company =
+created and got 504 error on BE due to DB high load </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7261?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Daniil Yurov </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> UAT_19_SELLIT, Verified=
+OnQA </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7252?src=3Dconfmac=
+ro">FRNTOFF-7252</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7252?src=3Dconfmacro"> [My activit=
+ies] 'Timestamp' column sorting is by String. </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7252?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Anthony Rozdobudko </td=
+>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Pavel Sakharchuk </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Regression, Reviewed, V=
+erifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7246?src=3Dconfmac=
+ro">FRNTOFF-7246</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7246?src=3Dconfmacro"> Create New =
+Order: Order could be submitted with Units to Order&gt; Recommended Packs t=
+o Order without Inventory Update if click Create Order with checked Parts c=
+heckbox </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7246?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Anthony Rozdobudko </td=
+>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/major.sv=
+g" alt=3D"High" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Reviewed, VerifiedOnQA =
+</td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7209?src=3Dconfmac=
+ro">FRNTOFF-7209</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7209?src=3Dconfmacro"> Alerts: No =
+alerts received for the working 31Dec day but Alerts received for the non w=
+orking 02Jan day </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7209?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Siarhei Ladutska </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7190?src=3Dconfmac=
+ro">FRNTOFF-7190</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7190?src=3Dconfmacro"> Order Histo=
+ry page&gt;Last90/Last91-180 filter: Some orders from boundary date 3 Month=
+s from today is absent on UI </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7190?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Siarhei Ladutska </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7178?src=3Dconfmac=
+ro">FRNTOFF-7178</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7178?src=3Dconfmacro"> Inventory i=
+mport file: non skippable exception during file processing </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7178?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Valiantsin Trusevich </=
+td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+9 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7177?src=3Dconfmac=
+ro">FRNTOFF-7177</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7177?src=3Dconfmacro"> Order Histo=
+ry file processing optimization: file failed with deadlock error </a> </td>=
+=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7177?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Daniil Yurov </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+0 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7149?src=3Dconfmac=
+ro">FRNTOFF-7149</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7149?src=3Dconfmacro"> Order Histo=
+ry file&gt;New Order creation: NullPointerException appears if second row c=
+ontains Not existed StoreID with the same External OrderID </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7149?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/trivial.=
+svg" alt=3D"None" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+9 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7143?src=3Dconfmac=
+ro">FRNTOFF-7143</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7143?src=3Dconfmacro"> Manual Orde=
+r file: Created By is missed in Shipping Instructions column </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7143?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Yuliana Yershova </td>=
+=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+8 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Regression, VerifiedOnQ=
+A </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7132?src=3Dconfmac=
+ro">FRNTOFF-7132</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7132?src=3Dconfmacro"> Activities:=
+ User does not have possibility to switch filter back if Last91-180 Days se=
+lected and Store has no activities for that period </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7132?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Anthony Rozdobudko </td=
+>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Katsiaryna Shchuchenka =
+</td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <img sr=
+c=3D"https://incomm-payments.atlassian.net/images/icons/priorities/minor.sv=
+g" alt=3D"Normal" class=3D"icon"> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-success"=
+> Closed </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Completed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 1=
+8 </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> VerifiedOnQA </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div>=20
+<div class=3D"refresh-issues-bottom"> <span id=3D"total-issues-count" class=
+=3D"total-issues-count"> <span>Showing 20 out of</span> <a rel=3D"nofollow"=
+ title=3D"View all matching issues in JIRA." href=3D"https://incomm-payment=
+s.atlassian.net/secure/IssueNavigator.jspa?reset=3Dtrue&amp;jqlQuery=3Dproj=
+ect+%3D+FRNTOFF+AND+component+%3D+%22sell+IT%22+AND+fixVersion+in+%28SELLIT=
+-UI-1.14.0%2C+SELLIT-UI-1.14.1%2C+SELLIT-UI-1.14.2%2C+SELLIT-UI-1.14.3%2C+S=
+ELLIT-UI-1.14.4%2C+SELLIT-UI-1.14.5%2C+SELLIT-UI-1.14.6%2C+SELLIT-UI-1.14.7=
+%2C+SELLIT-UI-1.14.8%2C+SELLIT-UI-1.14.9%2C+SELLIT-UI-1.14.10%2C+SELLIT-UI-=
+1.14.11%2C+SELLIT-UI-1.14.12%2C+SELLIT-UI-1.14.13%2C+SELLIT-UI-1.14.14%2C+S=
+ELLIT-UI-1.14.15%2C+SELLIT-UI-1.15.0%2C+SELLIT-UI-1.15.1%2C+SELLIT-UI-1.15.=
+2%2C+SELLIT-UI-1.15.3%2C+SELLIT-UI-1.15.4%2C+SELLIT-UI-1.15.5%2C+SELLIT-UI-=
+1.15.6%2C+SELLIT-UI-1.15.7%2C+SELLIT-BE-1.14.0%2C+SELLIT-BE-1.14.1%2C+SELLI=
+T-BE-1.14.2%2C+SELLIT-BE-1.14.3%2C+SELLIT-BE-1.14.4%2C+SELLIT-BE-1.14.5%2C+=
+SELLIT-BE-1.14.6%2C+SELLIT-BE-1.14.7%2C+SELLIT-BE-1.14.8%2C+SELLIT-BE-1.14.=
+9%2C+SELLIT-BE-1.14.11%2C+SELLIT-BE-1.14.12%2C+SELLIT-BE-1.14.15%2C+SELLIT-=
+BE-1.14.16%2C+SELLIT-BE-1.14.17%2C+SELLIT-BE-1.14.19%2C+SELLIT-BE-1.14.20%2=
+C+SELLIT-BE-1.14.21%2C+SELLIT-BE-1.14.22%2C+SELLIT-BE-1.14.24%2C+SELLIT-BE-=
+1.15.0%2C+SELLIT-BE-1.15.1%2C+SELLIT-BE-1.15.2%2C+SELLIT-BE-1.15.3%2C+SELLI=
+T-BE-1.15.4%2C+SELLIT-BE-1.15.5%2C+SELLIT-BE-1.15.6%2C+SELLIT-BE-1.15.7%2C+=
+SELLIT-BE-1.15.9%2C+SELLIT-BE-1.15.10%2C+SELLIT-BE-1.15.11%2C+SELLIT-Identi=
+ty-1.14.0%2C+SELLIT-FN-1.14.2%2C+SELLIT-FN-1.14.3%29+AND+issuetype+in+%28Bu=
+g%29+ORDER+BY+issuetype+DESC++&amp;src=3Dconfmacro"> 52 issues </a> </span>=
+=20
+</div>=20
+<p></p>=20
+</div>=20
+<p></p>
+    </div>
+</body>
+</html>
+------=_Part_20_1748721251.1643241053428--

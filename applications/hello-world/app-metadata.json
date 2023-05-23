@@ -1,0 +1,7 @@
+{
+  "template_change_number": "CHG0091023",
+  "successful_close_notes": "This Normal Change is marked as Deployment Complete. All automated testing and validation has been completed successfully. The change was fully deployed and validated, and no rollback was performed.", 
+  "successful_u_test_results": "All smoke tests completed successfully.",
+  "failed_close_notes": "This Normal Change is marked as Deployment Complete. The change was rolled back and previous version deployed. Application validated successfully after rollback.",
+  "failed_u_test_results": "All smoke tests completed successfully after rollback."
+}

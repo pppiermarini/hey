@@ -1,0 +1,6 @@
+[user]
+        name = scm-incomm
+        email = scm@incomm.com
+        password = 2ad4a37fe52960c2651e6fef99b579e3f27a845f
+[credential]
+        helper = store

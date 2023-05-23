@@ -1,0 +1,21 @@
+artifactInfo:
+  repoId: maven-all
+  groupId: com.incomm.mdm
+  artifactId: 'mdm-webapp-ui'
+  artExtension: war
+  artifactName: 'mdm-webapp-ui.war'
+
+deployment:
+  serviceName: "mdm-ui-instance"
+  artifactDeploymentLoc: "/var/opt/pivotal/pivotal-tc-server-standard/mdm-ui-instance/webapps"
+  configFolderLoc: "/var/opt/pivotal/pivotal-tc-server-standard/mdm-ui-instance/lib/"
+  instanceLogsLoc: "/var/opt/pivotal/pivotal-tc-server-standard/mdm-ui-instance/logs"
+  user: "tcserver"
+  group: "pivotal"
+  warFolderName: "mdm-webapp-ui"
+  newWarFolderName: "mdm-webapp-ui"
+  gitDeployModule: "mdm-ui-config"
+  configRepository: "https://github.com/InComm-Software-Development/mdm-configuration.git"
+  deployCommonConfig: true
+
+emailDistribution: "jrivett@incomm.com vhari@incomm.com"

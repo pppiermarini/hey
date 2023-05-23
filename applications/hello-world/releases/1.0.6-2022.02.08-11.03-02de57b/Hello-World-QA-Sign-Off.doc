@@ -1,0 +1,1113 @@
+Date: Wed, 26 Jan 2022 23:50:54 +0000 (UTC)
+Message-ID: <261385155.29.1643241054569@53307c4f04bc>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_28_32279671.1643241054568"
+
+------=_Part_28_32279671.1643241054568
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>QA Sign Off Report Sprint 17-20</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>QA Sign Off Report Sprint 17-20</h1>
+    <div class=3D"Section1">
+        <p></p>
+<p><strong> Signed Off by</strong> <a class=3D"confluence-userlink user-men=
+tion" data-username=3D"60836b16d4b107006702629b" data-account-id=3D"60836b1=
+6d4b107006702629b" href=3D"https://incomm-payments.atlassian.net/wiki/peopl=
+e/60836b16d4b107006702629b?ref=3Dconfluence" target=3D"_blank" data-linked-=
+resource-id=3D"55468463593" data-linked-resource-version=3D"1" data-linked-=
+resource-type=3D"userinfo" data-base-url=3D"https://incomm-payments.atlassi=
+an.net/wiki">Katsiaryna Shchuchenka</a> <time datetime=3D"2022-01-25" class=
+=3D"date-past">25 Jan 2022</time> </p>
+<p>&nbsp;</p>
+<p>The final QA approved artefact versions to be deployed UAT and Prod afte=
+r getting UAT approval:</p>
+<h3 id=3D"QASignOffReportSprint17-20-Versions:">Versions:</h3>
+<p><strong><span style=3D"color: rgb(76,154,255);">UI-1.15.7-2022.01.24-06.=
+27-34bb1d5</span></strong></p>
+<p><strong><span style=3D"color: rgb(76,154,255);">BE-1.15.11-2022.01.25-07=
+.32-2ea27f2</span></strong></p>
+<p><strong><span style=3D"color: rgb(76,154,255);">Identity-1.14.2-2021.12.=
+13-11.40-f0fc2cc</span></strong></p>
+<p><strong><span style=3D"color: rgb(76,154,255);">FN-1.15.0-2022.01.25-05.=
+06-a0c64b7</span></strong></p>
+<div class=3D"confluence-information-macro confluence-information-macro-not=
+e">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-warning confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p><strong>See Deployment instructions: </strong><a href=3D"/wiki/spaces/Fr=
+ontOffice/pages/60501229732/Sprint+17" data-linked-resource-id=3D"605012297=
+32" data-linked-resource-version=3D"8" data-linked-resource-type=3D"page"><=
+strong>Sprint 17 - Front Office Platform - Confluence (atlassian.net)</stro=
+ng></a> <a href=3D"/wiki/spaces/FrontOffice/pages/60555034688/Sprint+19+Pre=
+-Deployment+Instructions" data-linked-resource-id=3D"60555034688" data-link=
+ed-resource-version=3D"8" data-linked-resource-type=3D"page">Sprint 19 Pre-=
+Deployment Instructions</a> </p>
+</div>
+</div>
+<h1 id=3D"QASignOffReportSprint17-20-ReleaseNotesSprint17-20"><a href=3D"/w=
+iki/spaces/FrontOffice/pages/60539372708/Release+Notes+Sprint+17-20" data-l=
+inked-resource-id=3D"60539372708" data-linked-resource-version=3D"8" data-l=
+inked-resource-type=3D"page">Release Notes Sprint 17-20</a> </h1>
+<p></p>
+<p></p>
+<div class=3D"table-wrap">
+<table data-layout=3D"full-width" data-local-id=3D"c727392d-e8d3-4e57-a5c9-=
+d4cb8b9c6c7e" class=3D"confluenceTable">
+<colgroup>
+<col style=3D"width: 833.0px;">
+<col style=3D"width: 136.0px;">
+<col style=3D"width: 831.0px;">
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh"><p>Action</p></th>
+<th class=3D"confluenceTh"><p>Status</p></th>
+<th class=3D"confluenceTh"><p>Comment</p></th>
+</tr>
+<tr>
+<td data-highlight-colour=3D"#deebff" colspan=3D"3" class=3D"confluenceTd">=
+<p><strong>Prerequisites</strong></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>UAT sign Off done</p></td>
+<td class=3D"confluenceTd">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"60539372676"=
+>
+<li class=3D"checked" data-inline-task-id=3D"1"><span class=3D"placeholder-=
+inline-tasks">Yes</span></li>
+<li data-inline-task-id=3D"2"><span class=3D"placeholder-inline-tasks">No</=
+span></li>
+</ul></td>
+<td class=3D"confluenceTd"><p><a href=3D"/wiki/spaces/FrontOffice/pages/605=
+44975321/Sprint+17-19+UAT+-+Jan+%28Tue%2C+Jan+11+-+Tue%2C+Jan+18%29+-+Appro=
+ved" data-linked-resource-id=3D"60544975321" data-linked-resource-version=
+=3D"13" data-linked-resource-type=3D"page">Sprint 17-19 UAT - Jan (Tue, Jan=
+ 11 - Tue, Jan 18) - Approved</a> </p><p><a href=3D"/wiki/spaces/FrontOffic=
+e/pages/60573646849/Sprint+20+UAT+-+Jan+%28Fri%2C+Jan+21+-+Fri%2C+Jan+28%29=
++-+Approved" data-linked-resource-id=3D"60573646849" data-linked-resource-v=
+ersion=3D"6" data-linked-resource-type=3D"page">Sprint 20 UAT - Jan (Fri, J=
+an 21 - Fri, Jan 28) - Approved</a> </p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>All Development work completed for Sprint 16 =
+scope</p></td>
+<td class=3D"confluenceTd">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"60539372676"=
+>
+<li class=3D"checked" data-inline-task-id=3D"3"><span class=3D"placeholder-=
+inline-tasks">Yes</span></li>
+<li data-inline-task-id=3D"4"><span class=3D"placeholder-inline-tasks">No</=
+span></li>
+</ul></td>
+<td class=3D"confluenceTd"><p><br><a href=3D"/wiki/spaces/FrontOffice/pages=
+/60539372708/Release+Notes+Sprint+17-20" data-linked-resource-id=3D"6053937=
+2708" data-linked-resource-version=3D"8" data-linked-resource-type=3D"page"=
+>Release Notes Sprint 17-20</a> </p><p><br></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><strong>All In-Sprint test activities have be=
+en completed and passed for the following functionality:</strong></p><p><st=
+rong>Sprint 17 Goals:</strong></p>
+<ol>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6823" rel=3D"nofollow">CR - Add Two fields to Task Mana=
+gement Page</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6799" rel=3D"nofollow">Add User Guide for Internal User=
+s</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6353" rel=3D"nofollow">Manage Order Icon business days =
+in system settings</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6151" rel=3D"nofollow">Store warehouse of origin as par=
+t of data processing in Sell-IT</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6744" rel=3D"nofollow">Messages: Get Message Statistics=
+ for each message sent by user</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6144" rel=3D"nofollow">MAM Admin: apply permissions to =
+manage settings on Merchant level</a></p></li>
+<li><p>Investigation:</p>
+<ol>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-5963" rel=3D"nofollow">Manage Merchants within Sell-IT<=
+/a></p></li>
+</ol></li>
+</ol><p><strong>Sprint 18 Goals:</strong></p>
+<ol>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6145" rel=3D"nofollow">[Enhancement]Admin Settings: app=
+ly success confirmation message</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-5568" rel=3D"nofollow">[View Activities] Allow user to =
+search 6 months using advance search</a></p></li>
+<li><p>Tech enchancements:</p>
+<ol>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7040" rel=3D"nofollow">Sales Import Job Optimization</a=
+></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7039" rel=3D"nofollow">Shipment Import Job Optimization=
+</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7038" rel=3D"nofollow">Order Import Job Optimization</a=
+>y</p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7037" rel=3D"nofollow">Inventory Import Job Optimizatio=
+n</a></p></li>
+</ol></li>
+</ol><p><strong>Sprint 19 Goals:</strong></p><p>Complete Tech enhancements =
+and introduce Alerts:</p>
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7121" rel=3D"nofollow">Prevent Sales Import Job being r=
+un concurrently</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7123" rel=3D"nofollow">Investigate date parsing issues<=
+/a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7045" rel=3D"nofollow">[DEV_OPS] Implement support of J=
+MS retries</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6902" rel=3D"nofollow">[DEV_OPS] Introduce alerting fun=
+ctionality</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6143" rel=3D"nofollow">[Alerts] Notify Logistic Team if=
+ SLA on file receiving is missed</a></p></li>
+<li><p>Defect fixes.</p></li>
+</ul><p><strong>Sprint 20 Goals:</strong></p>
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-6191" rel=3D"nofollow">Update Planogram Page to include=
+ Products Data</a></p></li>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/browse/FRNTOFF-7214" rel=3D"nofollow">Batch file download lock</a></p>=
+</li>
+<li><p>Discrepancy file: <a class=3D"external-link" href=3D"https://incomm-=
+payments.atlassian.net/browse/FRNTOFF-7215" rel=3D"nofollow">Case-ignorant =
+pack name check during file import jobs</a></p></li>
+<li><p>Tech enhancement: <a class=3D"external-link" href=3D"https://incomm-=
+payments.atlassian.net/browse/FRNTOFF-7210" rel=3D"nofollow">Introduce down=
+loading files using streams</a></p></li>
+<li><p>Defect fixes</p></li>
+</ul><p></p></td>
+<td class=3D"confluenceTd">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"60539372676"=
+>
+<li class=3D"checked" data-inline-task-id=3D"5"><span class=3D"placeholder-=
+inline-tasks">Yes</span></li>
+<li data-inline-task-id=3D"6"><span class=3D"placeholder-inline-tasks">No</=
+span></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Functionality have been tested manually.</p><=
+p>Testing was performed based on acceptance criteria</p><p></p><p></p></td>
+</tr>
+<tr>
+<td data-highlight-colour=3D"#deebff" colspan=3D"3" class=3D"confluenceTd">=
+<p><strong>Verification status on QA env </strong><time datetime=3D"2022-01=
+-24" class=3D"date-past">24 Jan 2022</time> <br></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>Build was successfully installed and Smoke te=
+st Passed</p><h3 id=3D"QASignOffReportSprint17-20-Versions"><br><strong>Ver=
+sions</strong></h3><p><strong>UI-1.15.7-2022.01.24-06.27-34bb1d5</strong></=
+p><p><strong>BE-1.15.10-2022.01.21-11.55-4a039af</strong></p><p><strong>Ide=
+ntity-1.14.2-2021.12.13-11.40-f0fc2cc</strong></p><p><strong>FN-1.15.0-2022=
+.01.25-05.06-a0c64b7</strong></p></td>
+<td class=3D"confluenceTd">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"60539372676"=
+>
+<li class=3D"checked" data-inline-task-id=3D"7"><span class=3D"placeholder-=
+inline-tasks">Yes</span></li>
+<li data-inline-task-id=3D"8"><span class=3D"placeholder-inline-tasks">No</=
+span></li>
+</ul><p></p></td>
+<td class=3D"confluenceTd"><p><strong>Smoke Test </strong><a class=3D"exter=
+nal-link" href=3D"http://testreports.incomm.com/ui/#fusion/launches/91/7884=
+" rel=3D"nofollow">SellIT_smoke_qa #193</a><strong> <span style=3D"color: r=
+gb(54,179,126);">Passed </span></strong><time datetime=3D"2022-01-24" class=
+=3D"date-past">24 Jan 2022</time> </p><p></p><p><strong>Regression automati=
+on <span style=3D"color: rgb(54,179,126);">Passed</span></strong> <strong>4=
+26 of 432</strong> <time datetime=3D"2022-01-21" class=3D"date-past">21 Jan=
+ 2022</time> </p><p><span style=3D"color: rgb(255,86,48);">6 test failed -3=
+ Autotests need to be fixed , 3 tests failed due to known issue which is in=
+ the scope of Sprint 21</span>- <strong><span style=3D"color: rgb(54,179,12=
+6);">Passed Manuall</span></strong><span style=3D"color: rgb(54,179,126);">=
+y</span></p><p><strong>See </strong><a class=3D"external-link" href=3D"http=
+://testreports.incomm.com/ui/#fusion/launches/99/7848" rel=3D"nofollow"><st=
+rong>SellIT_regression_qa #39</strong></a></p><p></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>Manual verification done</p></td>
+<td class=3D"confluenceTd">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"60539372676"=
+>
+<li class=3D"checked" data-inline-task-id=3D"9"><span class=3D"placeholder-=
+inline-tasks">Yes</span></li>
+<li data-inline-task-id=3D"10"><span class=3D"placeholder-inline-tasks">No<=
+/span></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Manual verification of export to excel of Ord=
+er History, Sent Messages statistic, Tasks completion progress, Discrepanci=
+es files is <strong><span style=3D"color: rgb(54,179,126);">Done</span></st=
+rong></p><p><u>Risk Based approach has been applied before deployment to UA=
+T</u></p><p><u>Manual testing of Store Inventory, Order History, Shipment f=
+iles processing is </u><strong><span style=3D"color: rgb(54,179,126);"><u>D=
+one</u></span></strong><u>.</u></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>Found Defects was reported and investigation =
+was done (if any)</p></td>
+<td class=3D"confluenceTd">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"60539372676"=
+>
+<li class=3D"checked" data-inline-task-id=3D"11"><span class=3D"placeholder=
+-inline-tasks">Yes</span></li>
+<li data-inline-task-id=3D"12"><span class=3D"placeholder-inline-tasks">No<=
+/span></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>There are 11 defects in Open/In Progress stat=
+us - are going to be fixed in Sprint21 or Reviewed and moved to the backlog=
+:</p>=20
+<div id=3D"refresh-module-435507367" class=3D"confluence-jim-macro refresh-=
+module-id jira-table">=20
+<p> </p>
+<div id=3D"jira-issues-435507367" style=3D"width: 100%;  overflow: auto;" c=
+lass=3D"jira-issues">=20
+<table class=3D"aui">=20
+<tbody>=20
+<tr></tr>=20
+<tr>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Key</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Summary</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">T</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Status</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">severity</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">Labels</span></th>=20
+<th style=3D"text-align: left; text-transform: capitalize;" class=3D"jira-m=
+acro-table-underline-pdfexport jira-tablesorter-header"><span class=3D"jim-=
+table-header-content">sprint</span></th>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7372?src=3Dconfmac=
+ro">FRNTOFF-7372</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7372?src=3Dconfmacro"> [QA, UAT]Ta=
+sk creation: OK error message appears if Submit failed during big Task crea=
+tion for All Albertsons Company </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7372?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-current"=
+> IN PROGRESS </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Reviewed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+1 </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7316?src=3Dconfmac=
+ro">FRNTOFF-7316</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7316?src=3Dconfmacro"> [Prod] Orde=
+r History file processing: file failed with deadlock error </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7316?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> ProdIssue </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7245?src=3Dconfmac=
+ro">FRNTOFF-7245</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7245?src=3Dconfmacro"> Store On Ha=
+nd&gt;Car icon, Confirmation page: no tooltip shown for Product 'Total Wire=
+less V18 UNL SMS 4 lines 100 DDP' </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7245?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> ReproducedOnQA, Reviewe=
+d </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7148?src=3Dconfmac=
+ro">FRNTOFF-7148</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7148?src=3Dconfmacro"> Order Histo=
+ry file: second row with valid data skipped and discrepancy INCONSISTENT_ST=
+ORE_ID_FOR_ORDER logged if first row from order contains invalid StoreID </=
+a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7148?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7063?src=3Dconfmac=
+ro">FRNTOFF-7063</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7063?src=3Dconfmacro"> Admin&gt;Me=
+ssage Template: Unknown error shown during template update instead of user =
+friendly message </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7063?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> ProdIssue, Reviewed, UA=
+T </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-4704?src=3Dconfmac=
+ro">FRNTOFF-4704</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-4704?src=3Dconfmacro"> Store On Ha=
+nd/Confirmation/Place Order/My Activities: Filtered results are not sorted =
+if sorting was applied first </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-4704?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Major </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> CreatedInSprint1, Reope=
+ned, ReproducedOnProd </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7356?src=3Dconfmac=
+ro">FRNTOFF-7356</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7356?src=3Dconfmacro"> [Place Orde=
+r, Confirmation] Missing product options in the 'Add Items' widget in case =
+of exceeding 20 items count </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7356?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Minor </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> ReproducedOnProd, Revie=
+wed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7267?src=3Dconfmac=
+ro">FRNTOFF-7267</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7267?src=3Dconfmacro"> Stores list=
+ in Store selector becomes compressed if return to Sell IT from System Sett=
+ings&gt;Message Templates </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7267?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Minor </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> ReproducedOnProd, Revie=
+wed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7144?src=3Dconfmac=
+ro">FRNTOFF-7144</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7144?src=3Dconfmacro"> Order Histo=
+ry file: discrepancy INCONSISTENT_STORE_ID_FOR_ORDER should contain specifi=
+c info about sheetname and Order nbr </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7144?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Minor </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+<tr class=3D"rowAlternate">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7255?src=3Dconfmac=
+ro">FRNTOFF-7255</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7255?src=3Dconfmacro"> [My activit=
+ies] 'Description' column is sorted with priority for 'Order...' notes. </a=
+> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7255?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-current"=
+> QA: In Progress </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Trivial </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Groomed, ReproducedOnPr=
+od, Reviewed </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Fusion:sell IT Sprint 2=
+1 </td>=20
+</tr>=20
+<tr class=3D"rowNormal">=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7138?src=3Dconfmac=
+ro">FRNTOFF-7138</a> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> <a href=3D"https://inco=
+mm-payments.atlassian.net/browse/FRNTOFF-7138?src=3Dconfmacro"> Activities:=
+ Activity created within the very first hour of the 180th day is not in the=
+ list of 91-180 Days for summer time </a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <a href=
+=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7138?src=3Dconfmac=
+ro"><img src=3D"https://incomm-payments.atlassian.net/rest/api/2/universal_=
+avatar/view/type/issuetype/avatar/14603?size=3Dmedium" alt=3D"Bug" class=3D=
+"icon"></a> </td>=20
+<td nowrap=3D"true" class=3D"jira-macro-table-underline-pdfexport"> <!-- Th=
+e new status lozengens support for JIRA 6.2 or later. Otherwise we use the =
+icon.--> <span class=3D"aui-lozenge aui-lozenge-subtle aui-lozenge-complete=
+"> Open </span> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> Trivial </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+<td class=3D"jira-macro-table-underline-pdfexport"> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div>=20
+<div class=3D"refresh-issues-bottom"> <span id=3D"total-issues-count" class=
+=3D"total-issues-count"> <a rel=3D"nofollow" title=3D"View all matching iss=
+ues in JIRA." href=3D"https://incomm-payments.atlassian.net/secure/IssueNav=
+igator.jspa?reset=3Dtrue&amp;jqlQuery=3Dproject+%3D+FRNTOFF+AND+component+%=
+3D+%22sell+IT%22+AND+affectedVersion+in+%28SELLIT-UI-1.14.0%2C+SELLIT-UI-1.=
+14.1%2C+SELLIT-UI-1.14.2%2C+SELLIT-UI-1.14.3%2C+SELLIT-UI-1.14.4%2C+SELLIT-=
+UI-1.14.5%2C+SELLIT-UI-1.14.6%2C+SELLIT-UI-1.14.7%2C+SELLIT-UI-1.14.8%2C+SE=
+LLIT-UI-1.14.9%2C+SELLIT-UI-1.14.10%2C+SELLIT-UI-1.14.11%2C+SELLIT-UI-1.14.=
+12%2C+SELLIT-UI-1.14.13%2C+SELLIT-UI-1.14.14%2C+SELLIT-UI-1.14.15%2C+SELLIT=
+-UI-1.15.0%2C+SELLIT-UI-1.15.1%2C+SELLIT-UI-1.15.2%2C+SELLIT-UI-1.15.3%2C+S=
+ELLIT-UI-1.15.4%2C+SELLIT-UI-1.15.5%2C+SELLIT-UI-1.15.6%2C+SELLIT-UI-1.15.7=
+%2C+SELLIT-BE-1.14.0%2C+SELLIT-BE-1.14.1%2C+SELLIT-BE-1.14.2%2C+SELLIT-BE-1=
+.14.3%2C+SELLIT-BE-1.14.4%2C+SELLIT-BE-1.14.5%2C+SELLIT-BE-1.14.6%2C+SELLIT=
+-BE-1.14.7%2C+SELLIT-BE-1.14.8%2C+SELLIT-BE-1.14.9%2C+SELLIT-BE-1.14.11%2C+=
+SELLIT-BE-1.14.12%2C+SELLIT-BE-1.14.15%2C+SELLIT-BE-1.14.16%2C+SELLIT-BE-1.=
+14.17%2C+SELLIT-BE-1.14.19%2C+SELLIT-BE-1.14.20%2C+SELLIT-BE-1.14.21%2C+SEL=
+LIT-BE-1.14.22%2C+SELLIT-BE-1.14.24%2C+SELLIT-BE-1.15.0%2C+SELLIT-BE-1.15.1=
+%2C+SELLIT-BE-1.15.2%2C+SELLIT-BE-1.15.3%2C+SELLIT-BE-1.15.4%2C+SELLIT-BE-1=
+.15.5%2C+SELLIT-BE-1.15.6%2C+SELLIT-BE-1.15.7%2C+SELLIT-BE-1.15.9%2C+SELLIT=
+-BE-1.15.10%2C+SELLIT-BE-1.15.11%2C+SELLIT-Identity-1.14.0%2C+SELLIT-FN-1.1=
+4.2%2C+SELLIT-FN-1.14.3%29+AND+issuetype+in+%28Bug%29+AND+status+not+in+%28=
+CLosed%29+ORDER+BY+cf%5B10209%5D+ASC%2C+issuetype+DESC++++&amp;src=3Dconfma=
+cro"> 11 issues </a> </span>=20
+</div>=20
+<p></p>=20
+</div> <p></p><p><br></p></td>
+</tr>
+<tr>
+<td data-highlight-colour=3D"#ffebe6" colspan=3D"3" class=3D"confluenceTd">=
+<p><strong>Verification status on UAT env </strong><time datetime=3D"2022-0=
+1-25" class=3D"date-past">25 Jan 2022</time> <br></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>Build was successfully installed and Smoke te=
+st Passed<br><br><strong>Versions:</strong></p><p><strong><span style=3D"co=
+lor: rgb(76,154,255);">UI-1.15.7-2022.01.24-06.27-34bb1d5</span></strong></=
+p><p><strong><span style=3D"color: rgb(255,86,48);">BE-1.15.11-2022.01.25-0=
+7.32-2ea27f2</span></strong></p><p><strong><span style=3D"color: rgb(76,154=
+,255);">Identity-1.14.2-2021.12.13-11.40-f0fc2cc</span></strong></p><p><str=
+ong><span style=3D"color: rgb(76,154,255);">FN-1.15.0-2022.01.25-05.06-a0c6=
+4b7</span></strong></p></td>
+<td class=3D"confluenceTd">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"60539372676"=
+>
+<li class=3D"checked" data-inline-task-id=3D"13"><span class=3D"placeholder=
+-inline-tasks">Yes</span></li>
+<li data-inline-task-id=3D"14"><span class=3D"placeholder-inline-tasks">No<=
+/span></li>
+</ul></td>
+<td class=3D"confluenceTd"><p></p><p><strong>UAT: Read Only Smoke Test <spa=
+n style=3D"color: rgb(54,179,126);">Passed </span></strong><time datetime=
+=3D"2022-01-25" class=3D"date-past">25 Jan 2022</time> </p><p><a class=3D"e=
+xternal-link" href=3D"http://testreports.incomm.com/ui/#fusion/launches/91/=
+7928" rel=3D"nofollow"><u>SellIT_smoke_uat #34</u></a><br></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>Found Defects was reported and investigation =
+was done (if any)</p></td>
+<td class=3D"confluenceTd">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"60539372676"=
+>
+<li class=3D"checked" data-inline-task-id=3D"15"><span class=3D"placeholder=
+-inline-tasks">Yes</span></li>
+<li data-inline-task-id=3D"16"><span class=3D"placeholder-inline-tasks">No<=
+/span></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>UAT is started however take into consideratio=
+n that there are 2 defects in Open/In Progress status that need t<strong>o =
+be Reviewed with PO</strong></p><p><a class=3D"external-link" data-card-app=
+earance=3D"inline" href=3D"https://incomm-payments.atlassian.net/browse/FRN=
+TOFF-7372" rel=3D"nofollow">https://incomm-payments.atlassian.net/browse/FR=
+NTOFF-7372</a> </p><p>m<a class=3D"external-link" data-card-appearance=3D"i=
+nline" href=3D"https://incomm-payments.atlassian.net/browse/FRNTOFF-7356" r=
+el=3D"nofollow">https://incomm-payments.atlassian.net/browse/FRNTOFF-7356</=
+a> </p><p><strong><span style=3D"color: rgb(54,179,126);">[Reviewed] agreed=
+ to postpone the fixes</span></strong> <time datetime=3D"2022-01-26" class=
+=3D"date-upcoming">26 Jan 2022</time> </p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+<p></p>
+<p><strong>Assumptions:</strong></p>
+<ol>
+<li><p>SellIT application has been tested on Win10 with the following brows=
+ers:</p>
+<ol>
+<li><p>Chrome&nbsp;(Version 97.0.4692.71).</p></li>
+<li><p>FireFox 91.3.</p></li>
+<li><p>Microsoft Edge ( the latest Version 97.0.1072.55 )</p></li>
+</ol></li>
+<li><p>Alerts was tested on lower env by using whitelisted emails. In Prod =
+Alerts will be sent to Logistics and Sell-IT Operations distro for each fil=
+e type if file absent in the appropriate folder:</p><p>&lt;STORE_LEVEL_INV_=
+RPT_MMDDYY_SEQ#&gt;</p><p>&lt;ORDER_HIST_RPT_MMDDYY_SEQ#&gt;</p><p>&lt;SHIP=
+MENT_RPT_MMDDYY_SEQ#&gt;</p></li>
+<li><p>The following defects reviewed and agreed to move to the backlog or =
+fix in the future sprint: </p></li>
+</ol>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" data-local-id=3D"2165258f-09f3-4bea-9a2a-ee7=
+97400ae9d" class=3D"confluenceTable">
+<colgroup>
+<col style=3D"width: 126.0px;">
+<col style=3D"width: 193.0px;">
+<col style=3D"width: 93.0px;">
+<col style=3D"width: 138.0px;">
+<col style=3D"width: 115.0px;">
+<col style=3D"width: 91.0px;">
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh"><p>Key</p></th>
+<th class=3D"confluenceTh"><p>Summary</p></th>
+<th class=3D"confluenceTh"><p>Epic Link</p></th>
+<th class=3D"confluenceTh"><p>Sprint</p></th>
+<th class=3D"confluenceTh"><p>Labels</p></th>
+<th class=3D"confluenceTh"><p>Severity</p></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7372" rel=3D"nofollow">FRNTOFF-7=
+372</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7372" rel=3D"nofollow">[QA, UAT]=
+Task creation: OK error message appears if Submit failed during big Task cr=
+eation for All Albertsons Company</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-4303" rel=3D"nofollow"> Tasks</a=
+></p></td>
+<td class=3D"confluenceTd"><p>Fusion:sell IT Sprint 21</p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/issues/?jql=3Dlabels+%3D+Reviewed" rel=3D"nofollow">Reviewed</a></p></=
+li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Major</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7316" rel=3D"nofollow">FRNTOFF-7=
+316</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7316" rel=3D"nofollow">[Prod] Or=
+der History file processing: file failed with deadlock error</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-4239" rel=3D"nofollow"> Sell-IT =
+Technical Foundation</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/issues/?jql=3Dlabels+%3D+ProdIssue" rel=3D"nofollow">ProdIssue</a></p>=
+</li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Major</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7245" rel=3D"nofollow">FRNTOFF-7=
+245</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7245" rel=3D"nofollow">Store On =
+Hand&gt;Car icon, Confirmation page: no tooltip shown for Product 'Total Wi=
+reless V18 UNL SMS 4 lines 100 DDP'</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3483" rel=3D"nofollow"> Store In=
+ventory - Products</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/issues/?jql=3Dlabels+%3D+ReproducedOnQA" rel=3D"nofollow">ReproducedOn=
+QA</a></p><p><a class=3D"external-link" href=3D"https://incomm-payments.atl=
+assian.net/issues/?jql=3Dlabels+%3D+Reviewed" rel=3D"nofollow">Reviewed</a>=
+</p></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Major</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7148" rel=3D"nofollow">FRNTOFF-7=
+148</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7148" rel=3D"nofollow">Order His=
+tory file: second row with valid data skipped and discrepancy INCONSISTENT_=
+STORE_ID_FOR_ORDER logged if first row from order contains invalid StoreID<=
+/a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3496" rel=3D"nofollow"> Store Or=
+ders</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>None</p></td>
+<td class=3D"confluenceTd"><p>Major</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7063" rel=3D"nofollow">FRNTOFF-7=
+063</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7063" rel=3D"nofollow">Admin&gt;=
+Message Template: Unknown error shown during template update instead of use=
+r friendly message</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-4556" rel=3D"nofollow"> System A=
+dministration</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/issues/?jql=3Dlabels+%3D+ProdIssue" rel=3D"nofollow">ProdIssue</a></p>=
+<p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian.net=
+/issues/?jql=3Dlabels+%3D+Reviewed" rel=3D"nofollow">Reviewed</a></p><p><a =
+class=3D"external-link" href=3D"https://incomm-payments.atlassian.net/issue=
+s/?jql=3Dlabels+%3D+UAT" rel=3D"nofollow">UAT</a></p></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Major</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-4704" rel=3D"nofollow">FRNTOFF-4=
+704</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-4704" rel=3D"nofollow">Store On =
+Hand/Confirmation/Place Order/My Activities: Filtered results are not sorte=
+d if sorting was applied first</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3483" rel=3D"nofollow"> Store In=
+ventory - Products</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/issues/?jql=3Dlabels+%3D+CreatedInSprint1" rel=3D"nofollow">CreatedInS=
+print1</a></p><p><a class=3D"external-link" href=3D"https://incomm-payments=
+.atlassian.net/issues/?jql=3Dlabels+%3D+Reopened" rel=3D"nofollow">Reopened=
+</a></p><p><a class=3D"external-link" href=3D"https://incomm-payments.atlas=
+sian.net/issues/?jql=3Dlabels+%3D+ReproducedOnProd" rel=3D"nofollow">Reprod=
+ucedOnProd</a></p></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Major</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7356" rel=3D"nofollow">FRNTOFF-7=
+356</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7356" rel=3D"nofollow">[Place Or=
+der, Confirmation] Missing product options in the 'Add Items' widget in cas=
+e of exceeding 20 items count</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/issues/?jql=3Dlabels+%3D+ReproducedOnProd" rel=3D"nofollow">Reproduced=
+OnProd</a></p><p><a class=3D"external-link" href=3D"https://incomm-payments=
+.atlassian.net/issues/?jql=3Dlabels+%3D+Reviewed" rel=3D"nofollow">Reviewed=
+</a></p></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Minor</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7267" rel=3D"nofollow">FRNTOFF-7=
+267</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7267" rel=3D"nofollow">Stores li=
+st in Store selector becomes compressed if return to Sell IT from System Se=
+ttings&gt;Message Templates</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/issues/?jql=3Dlabels+%3D+ReproducedOnProd" rel=3D"nofollow">Reproduced=
+OnProd</a></p><p><a class=3D"external-link" href=3D"https://incomm-payments=
+.atlassian.net/issues/?jql=3Dlabels+%3D+Reviewed" rel=3D"nofollow">Reviewed=
+</a></p></li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Minor</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7144" rel=3D"nofollow">FRNTOFF-7=
+144</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7144" rel=3D"nofollow">Order His=
+tory file: discrepancy INCONSISTENT_STORE_ID_FOR_ORDER should contain speci=
+fic info about sheetname and Order nbr</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3496" rel=3D"nofollow"> Store Or=
+ders</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>None</p></td>
+<td class=3D"confluenceTd"><p>Minor</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7255" rel=3D"nofollow">FRNTOFF-7=
+255</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7255" rel=3D"nofollow">[My activ=
+ities] 'Description' column is sorted with priority for 'Order...' notes.</=
+a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3946" rel=3D"nofollow"> Dashboar=
+d</a></p></td>
+<td class=3D"confluenceTd"><p>Fusion:sell IT Sprint 21</p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassian=
+.net/issues/?jql=3Dlabels+%3D+Groomed" rel=3D"nofollow">Groomed</a></p><p><=
+a class=3D"external-link" href=3D"https://incomm-payments.atlassian.net/iss=
+ues/?jql=3Dlabels+%3D+ReproducedOnProd" rel=3D"nofollow">ReproducedOnProd</=
+a></p><p><a class=3D"external-link" href=3D"https://incomm-payments.atlassi=
+an.net/issues/?jql=3Dlabels+%3D+Reviewed" rel=3D"nofollow">Reviewed</a></p>=
+</li>
+</ul></td>
+<td class=3D"confluenceTd"><p>Trivial</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7138" rel=3D"nofollow">FRNTOFF-7=
+138</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-7138" rel=3D"nofollow">Activitie=
+s: Activity created within the very first hour of the 180th day is not in t=
+he list of 91-180 Days for summer time</a></p></td>
+<td class=3D"confluenceTd"><p><a class=3D"external-link" href=3D"https://in=
+comm-payments.atlassian.net/browse/FRNTOFF-3946" rel=3D"nofollow"> Dashboar=
+d</a></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>None</p></td>
+<td class=3D"confluenceTd"><p>Trivial</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_28_32279671.1643241054568--

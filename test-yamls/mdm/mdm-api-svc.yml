@@ -1,0 +1,21 @@
+artifactInfo:
+  repoId: maven-all
+  groupId: com.incomm.mdm
+  artifactId: mdm-api-service-ws
+  artExtension: war
+  artifactName: mdm-api-service-ws.war
+
+deployment:
+  serviceName: "mdm-ws-instance"
+  artifactDeploymentLoc: '/var/opt/pivotal/pivotal-tc-server-standard/mdm-ws-instance/webapps'
+  configFolderLoc: "/var/opt/pivotal/pivotal-tc-server-standard/mdm-ws-instance/lib"
+  instanceLogsLoc: "/var/opt/pivotal/pivotal-tc-server-standard/mdm-ws-instance/logs"
+  user: "tcserver"
+  group: "pivotal"
+  warFolderName: "mdm-api-ws"
+  newWarFolderName: "mdm-api-ws-2"
+  gitDeployModule: "mdm-api-config"
+  configRepository: "https://github.com/InComm-Software-Development/mdm-configuration.git"
+  deployCommonConfig: true
+
+emailDistribution: "jrivett@incomm.com vhari@incomm.com"

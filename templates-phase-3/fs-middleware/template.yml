@@ -1,0 +1,31 @@
+#github attributes
+gitInfo:
+  gitYmlFile: hello-demo.yml
+  gitLoc: pipeline-data
+  gitConfLoc: conf
+
+
+#Artifactory attributes
+artifactInfo:
+  repoId: maven-all
+  artifactId: hello-world
+  groupId: hello-world-testing
+  artifactName: 
+  extension: war
+
+#Application attributes
+applicationInfo:
+  appLoc: /tmp
+  logLoc: /app/ApplicationName/log
+  configLoc: /app/ApplicationName/conf
+  serviceName: helloworld
+  
+#App permissions
+permissions:
+  user: tcserver
+  group: pivotal
+  chmod: 755
+  
+#Notifications
+email:
+  emailDistribution: "ppiermarini@incomm.com"
